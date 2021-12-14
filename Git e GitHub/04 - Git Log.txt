@@ -1,0 +1,12 @@
+O comando "git log" apresenta todos os commits do projeto, mostrando inclusive o número do hash-id por completo com a mensagem que anexada ao commit;
+
+- Caso a tela dispoosta para o terminal não caiba todos os commits haverá dois pontos ao final ":", se colocarmos uma barra mais alguma palavra, um commit que contenha essa palavra na mensagem é buscado;
+- Para voltar basta pressionar "b", para sair pressionar "q";
+- Para mudar esse comportamento usamos o comando "git config core.page cat" (o git passa a mosrtar todos os commits pelo comando "git log", a barra de rolagem é ativada), para voltar para esse comportamento "git config core.page less" (o git oculta os commits que não couberam na tela do terminal);
+- Podemos utilizar o comando "git log -2" para mostrar apenas o 2 últimos commits "git log -3" para os 3 últimos e assim por diante;
+- O comando "git log --oneline" mostra os commits cada um em apenas uma linha, como um resumo, o hash-id com apenas 7 dígitos, essa flag pode-se mesclar ao -1, -2, -3...;
+- "git log --before="aaaa-mm-dd" para os commits antes dessa data "git log --after="aaaa-mm-dd" para os commits após essa data;
+- "git log --since="2 days ago" para os logs desde 2 dias atrás;
+- "git log --after="1 week ago" para os logs de após 1 semana atrás(month também pode ser utilizado);
+- "git log --author="nome do autor" para os commits desse autor no projeto;
+- O comando "git help log" mostra o manual de comandos de log do Git, pode pressionar "q" para sair;

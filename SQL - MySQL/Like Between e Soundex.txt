@@ -1,0 +1,13 @@
+Exemplos de busca com os operadores like between e soundex:
+
+SELECT * FROM tb_pessoa WHERE nome LIKE '%a%'; <Começa com qualquer coisa, contém 'a' e termina com qualquer coisa>
+
+SELECT * FROM tb_pessoa WHERE nome LIKE 'a%'; <Começa com 'a' e termina com qualquer coisa>
+
+SELECT * FROM tb_pessoa WHERE nome LIKE '%a'; <Começa com qualquer coisa e termina com 'a'>
+
+SELECT * FROM tb_pessoa WHERE nome LIKE '__a%'; <Na terceira letra contém um 'a' e termina com qualquer coisa>
+
+SELECT * FROM tb_pessoa WHERE ano_nascimento BETWEEN 1970 AND 2000;
+
+

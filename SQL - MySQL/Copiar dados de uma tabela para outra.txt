@@ -1,0 +1,6 @@
+- Exemplo de query para migrar dados de uma tabela para outra:
+
+INSERT INTO tb_funcionarios <tabela que receberá os dados>
+SELECT id, nome, 950, CURRENT_DATE(), sexo, NULL FROM tb_pessoas;
+
+- A tabela tb_pessoas possui apenas id, nome e sexo, os outros campos foram sendo adaptados com valores fixos, current_date e null;

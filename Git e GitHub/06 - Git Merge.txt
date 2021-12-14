@@ -1,0 +1,3 @@
+Para trazer os commits de um branch qualquer para o branch Master precisamos fazer um merge;
+
+- Comando para o merge, lembrando que o projeto deve estar situado no branch Master "git merge <nome do branch que será absorvido>";

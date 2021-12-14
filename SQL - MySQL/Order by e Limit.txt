@@ -1,0 +1,12 @@
+
+SELECT * FROM tb_funcionarios ORDER BY nome;
+
+SELECT * FROM tb_funcionarios ORDER BY 2; <pode-se utilizar o número da coluna também>
+
+SELECT * FROM tb_funcionarios ORDER BY salario DESK, nome;
+
+SELECT * FROM tb_funcionarios ORDER BY salario LIMIT 0,3; <o primeiro valor do LIMIT é o ponto de partida e o segundo o número de registros trazidos>
+
+SELECT * FROM tb_funcionarios WHERE YEAR(cadastro) = 2016 AND MONTH(cadastro) = 5
+ORDER BY salario LIMIT 0,3;
+

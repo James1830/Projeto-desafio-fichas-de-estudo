@@ -1,0 +1,7 @@
+- O convert transforma o formato do dado que está sendo requisitado na query:
+
+USE banco;
+
+SELECT nome, salario AS atual,
+CONVERT(salario * 1.1, DEC(10,2)) AS 'salario com aumento de 10%'
+FROM tb_funcionarios;

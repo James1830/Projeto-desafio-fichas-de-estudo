@@ -1,0 +1,24 @@
+Os arquivos que estiverem "Trackeds" estarão prontos para serem "commitados", ou seja enviados para o estágio "Staged", o comando é o seguinte:
+
+- git commit -m "Deixa uma mensagem documentando o commit realizado"
+
+O Git vai gerar um hash-id para esse commit;
+
+- O comando "git checkout + hash-id (pode ser os 7 primeiros dígitos apenas)" faz com que o projeto retorne para o estado daquele commit, os arquivos que vieram após ele serão deletados, para retornar ao estado completo usamos "git checkout master", os arquivos retornam, com isso se pode navegar para qualquer fase anterior, ou branch, o branch principal é o  master;
+
+- Podemos renomear um arquivo diretamente no Git "git mv nomeatualdoarquivo novonome", após isso ele aparecerá com a marcação de renomeado e precisará ser commitado novamente, caso o arquivo seja nomeado diretamente no projeto ele passa a "untracked" e sua versão anterior com deletado, a operação é mais trablhosa;
+- Para deletar um arquivo "git rm nomedoarquivo", após isso commitar;
+- Para checar a diferença nos arquivos após a edição, mas antes de commitar "git diff --staged", também pode comparar com o estado de outro commit "git diff hash-id", o comparativo é mostrado;
+- Tambbém se pode observar a diferença entre dois commits "git diff hash-id..hash-id", sendo que o primeiro hash-id precisa ser mais antigo do que o segundo;
+- Se houver algum erro na mensagem de um commit é possível corrigir "git --amend "mensagem corrigida";
+- Se houver algum arquivo a ser acrescentado a um commit já feito "git commit --amend -m "mensagem";
+
+- Se alteramos arquivos no projeto, mas queremos desistir da mudança antes de adiciona-los ao monitoramento "git checkout -- .";
+- Mas se dos vários arquivos, queremos desistir da mudança de apenas um deles "git checkout -- <nome do arquivo>";
+- Se um arquivo foi adicionado ao monitoramento, mas queremos retira-lo do monitoramento, não iremos commitar, "git restore <file>;
+- Se um arquivo foi adicionado ao monitoramento, mas queremos restaura-lo ao seu modo anterior "git checkout HEAD -- <nome do arquivo>", se forem vários arquivos "git checkout HEAD -- .";
+- Se alteramos um arquivo, mas desistimos da alteração "git checkout <file>";
+- Se alteramos vários arquivos e desistimos de todas as alterações "git reset HEAD --hard";
+- Se já realizamos um commit, mas desistimos "git reset HEAD^ --hard"
+- Para resetarmos certo número de commits "git reset HEAD~1", esse número indica o número de commits que serão resetados, no caso aí está indicado apenas o último commit;
+- Para esse mesmo caso podemos usar "git revert <hash-id do commit que queremos reverter>", um novo commit será gerado revertendo o commit indicado;

@@ -1,0 +1,11 @@
+As tags no Git determinam um estado acabado do projeto, ou seja, um reliaze, ou uma versão;
+
+- Para criar uma tag "git tag <nome da tag>";
+- Para publicar essa tag no repositório central "git push origin <nome da tag criada>";
+
+É possível navegar entre as tags e checar o projeto em suas versões diferentes, não é possível commitar em uma tag;
+
+- Para ir para uma tag "git checkout <nome da tag>";
+- Para voltar para a master "git checkout master";
+- Para criar um branch dentro da tag, onde se pode commitar "git switch -c <nome do branch>";
+- Após commits nesse branch precisamos voltar para o master e fazer um rebase desses arquivos;

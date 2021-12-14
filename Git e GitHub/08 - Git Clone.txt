@@ -1,0 +1,4 @@
+Um repositório pode ser clonado, o seu clone pode colaborar com o repositório original, assim com ser atualizado por ele;
+
+- Comando para a clonagem "git clone <endereço do repositório> .", esse ponto ao final indica que o clone será criado na pasta local de onde o comando está sendo evocado;
+- Para clonar um repositório no GitHub "git clone <url do repositório>", o procedimento de configuração de usuário e e_mail deve ser feito como se fosse um novo repositório;

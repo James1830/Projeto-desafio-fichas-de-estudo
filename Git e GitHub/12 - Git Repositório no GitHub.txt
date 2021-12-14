@@ -1,0 +1,14 @@
+A abertura de repositórios no GitHub possui caminho intuitivo, após a etapa de criação, instruções de código para conexão com repositório local serão dadas em tela:
+
+echo "# camFrio-LOG" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/James1830/camFrio-LOG.git
+git push -u origin master
+
+- Seguindo essas instruções, as informações de usuário e senha são requisitadas a cada commit, para evitar isso passamos o seguinte comando "git config credential.helper store";
+
+- No repositório local o comando de push fica o seguinte "git push -u origin master";
+- Com o comando "git remote -v" podemos obter o endereço da origem do repositório no GitHub e os comandos que estão liberados;
+- Para convidar um colaborador para o seu projeto no GItHub acessamos a opção "settings" => "manage access", a confirmação de nossa senha será requisitada, após isso, a opção para o convite ficará disponível em tela, dentre as maneiras, pode ser feito um convite por e_mail;

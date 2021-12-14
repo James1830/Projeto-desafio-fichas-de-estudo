@@ -1,0 +1,12 @@
+
+START TRANSACTION; <por padrão de segurança esse comando lhe dá a condição de ter que confirmar ou não o que foi feito>
+
+DELETE FROM tb_funcionarios WHERE id = 1;
+
+ROLLBACK; <cancela a operação realizada>
+
+COMMIT; <confirma a operação>
+
+- O delete deixa rastro porque a numeração do id vai considerar o item deletado na contagem, para apagar os registros dando reinício à tabela devemos utilizar o seguinte comando:
+
+TRUNCATE TABLE tb_pessoas;

@@ -1,0 +1,3 @@
+O rebase tem um comportamento semelhante ao merge;
+
+- Comando para o rebase "git rebase <nome do branch que será absorvido>;

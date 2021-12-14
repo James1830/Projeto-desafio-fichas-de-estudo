@@ -1,0 +1,11 @@
+
+
+- O Git monitora os arquivos por meio de fases ou estágios;
+- O comando "git init" na raíz de um projeto faz com que o git inicie e passe a monitorar esse projeto, com isso, todos os arquivos constantes passam a estar no estágio "Untracked", após esse comando um diretório .git será criado na raíz do projeto, esse diretório é oculto;
+- O comando "git add nomedoarquivo" faz com que o determinado arquivo passe do estágio "Untracked" para "Tracked";
+	- Existe uma derivação desse comando que é o "git add .", esse comando faz com que TODOS os arquivos que ainda não foram adicionados aos Git sejam adicionados;
+- Quando um arquivo no estágio Tracked é alterado ele passa para o estágio "Modified";
+- Um arquivo Modified necessita voltar para o estágio Tracked para poder avançar ao próximo estágio que é o "Staged", pois de nunhum outro estágio se pode avançar para Staged, apenas de Tracked, sendo assim, se deve acionar o comando "git add nomedoarquivo" novamente para que ele volte ao estágio Tracked para depois dar o comando "Commit" para que ele passe ao estágio Staged;
+- O comando "git status" mostra o que há a ser feito no repositório Git, ele também pode mostrar que não há nada a ser feito;
+- O arquivo ".gitIgnore" traz tudo que o git vai ignorar em seu monitoramento, se pode acrescentar arquivos colocando o nome na lista, para dirertórios colocamos "**" antes do nome, para extensões coloca "*" antes da extensão;
+- Para criar um novo arquivo "touch <nome do arquivo.extensão>"

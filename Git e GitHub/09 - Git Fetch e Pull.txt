@@ -1,0 +1,6 @@
+Fetch e Pull são comandos para baixar atualizações do repositório original para o local com a diferença que o Fetch baixa sem fazer um merge e com isso dá espaço para se fazer um rebase;
+
+- "git fetch", os arquivos apenas serão baixados;
+- "git rebase", os arquivos baixados serão anexados (merge);
+- "git pull", os arquivos serão baixados e anexados, antes uma área será aberta com opções (^ significa Ctrl), podemos optar por gravar e depois sair;
+- Quando o repositório de origem está no GitHub o comando para baixar as atualizações fica o seguinte "git pull origin master";

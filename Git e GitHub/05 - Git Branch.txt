@@ -1,0 +1,6 @@
+Para visualizar os branchs constantes no projeto usamos "git branch";
+
+- Criar um novo branch "git branch <nome>";
+- Para mudarmos de branch "git checkout <nome da branch>";
+- Para criar um novo branch e já acessa-lo "git checkout -b <nome do branch>"
+- Para deletar um branch "git branch -d <nome do branch>", para fazer uma confirmação dessa operação o git pede para que o comando seja repetito com o "d" maiúsculo "git branch -D, isso ocorrerá apenas se um merge com o branch Master ainda não tiver sido realizado <nome do branch>";

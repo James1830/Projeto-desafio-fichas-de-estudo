@@ -1,0 +1,3 @@
+Um Bare Repository serve de central para um projeto, pois pode receber "git push" de outros repositórios que são seus clones;
+
+- Ao criar o repositório usa-se o comando "git init --bare";

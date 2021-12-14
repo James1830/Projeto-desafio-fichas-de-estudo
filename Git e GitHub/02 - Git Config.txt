@@ -1,0 +1,12 @@
+No diretório Git há um arquivo de configuração (config), ao iniciar um diretório Git é necessário informar o nome de usuário e e_mail para que esse arquivo seja alterado com esse registro, isso informará ao Git quem está trabalhando no projeto, segue os comandos:
+
+- git config user.name "nome do usuário";
+- git config user.email "email do usuário";
+
+Essas informação serão referentes àquele projeto criado, para validar essas informação em nível global, para qualquer projeto Git iniciado na máquina é necessário incluir a flag global:
+
+- git config --global user.name "nome do usuário";
+- git config --global user.email "email do usuário";
+
+- Para deixar essas informações salvas no VS-Code "git config credential.helper store", ou "git config --global credential.helper store"
+- Para remover da memória essas credenciais "git config --unset credential.helper", ou "git config --global --unset credential.helper"
