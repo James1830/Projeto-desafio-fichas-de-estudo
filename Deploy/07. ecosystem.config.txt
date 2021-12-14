@@ -1,0 +1,37 @@
+Ao invés de apontar para um index.js o pm2 pode apontar para um arquivo ecosystem.config, nele nós temos um objeto module.exports:
+
+module.exports = {
+
+	apps: [{
+
+		name: "camfriolog",
+		script: "./home/james/dist/main.js", //<o que deve ser startado pelo pm2>
+		instances: 0, //<número de instâncias que irão subir>
+		exec_mode: "cluster", //<modo de execução>
+		env: {
+
+			SERVER_PORT: 3001,
+			DB_URL: '192.241.155.71:3306',
+			NODE_ENV: "develoment"
+
+		},
+		env_production: {
+
+			SERVER_PORT: 3000,
+			DB_URL: '192.241.155.71:3306',
+			NODE_ENV: "production"
+		
+		}
+	
+	}]
+
+}
+
+- Para startar os processos em modo de produção: pm2 start ecosystem.config.js --env prodution;
+- Para efetivar alterações feitas nas configurações do ecosystem: pm2 restart ecosystem.config.js --update-env;
+
+
+mysql:
+   ...    
+   command: --default-authentication-plugin=mysql_native_password
+   restart: always

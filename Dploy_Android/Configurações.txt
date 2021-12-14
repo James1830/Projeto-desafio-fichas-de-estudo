@@ -1,0 +1,48 @@
+
+- Área web: flutter.dev/docs/deployment/android
+- Abrir o 'main' e colocar a seguinte diretiva logo abaixo da diretiva 'home:': debugShowCheckedModeBanner: false,;
+- Ir para 'android/app/src/main/AndroidManifest.xml
+	Na tag application, em label, inserir um título para o aplicativo;
+- Para gerar os ícones é utilizada uma ferramenta chamada flutter_launcher_icons (acessar web);
+	Na área de instalação pega a diretiva e coloca no pubspec.yaml do projeto em 'dev_dependencies';
+	No pubspec.yaml inserir uma nova diretiva:
+	flutter_icons:
+		android: true
+		ios: true
+		image_path: "caminhodaimagem"
+		adaptive_icon_background: "código rgb da cor"
+		adaptive_icon_foreground: "caminhodaimagem"
+- Atualiza o pubspec.yaml para validar as configurações;
+- Abrir a pasta do projeto no cmd e executar o seguinte comando:
+	flutter pub run flutter_launcher_icons:main
+- Ir para flutter.dev/docs/deployment/android
+	Na área de 'Create a Keystore' copiar uma das chaves para executar no cmd com o endereço do projeto, ao utilizar o windows, observar que o trecho do endereço da pasta pode ser personalizado, mas se deve manter '/key.jks';
+	Informar (criar) a senha para criação da chave;
+	Responder as perguntas;
+	No final escreve 'sim' e pressiona enter;
+- Acessar a pasta do projeto, na pasta 'android' criar um novo arquivo chamado 'key.properties';
+	Inserir o seguinte nesse arquivo:
+	storePassword=senhacriadanocmd
+	keyPassword=senhadachave
+	keyAlias=key
+	storeFile=caminho do arquivo da chave
+- Ir para android/app/build.gradle
+	Localiza o objeto android{};
+	Marcar esse trecho de código no arquivo: 'android{';
+	Ir na no trecho 'Configure signing in gradle' da área web;
+	Copiar a 2ª diretiva do item 01 e colar na zona marcada do arquivo no projeto fazendo uma substituição;
+	Marca todo o objeto 'buildTypes' e substitui pela 2ª diretiva do item 02 da área web no mesmo trecho;
+- No projeto ir para android/app/source/main/AndroidManifest.xml
+	Inserir a seguinte diretiva na segunda posição:
+	<uses-permission android:name="android.permission.INTERNET"/>
+- Acessar o cmd com a pasta do projeto e executar o seguinte comando:
+	flutter build appbundle
+	O arquivo gerado será um app.aab, ele se encontra em:
+	build/app/output/bundle/release/app.aab
+	Isso gerou o arquivo que subirá para a loja do android
+- Para gerar apenas um apk e instalar diretamente nos dispositivos, se utilizaria o seguinte comando:
+	flutter build apk
+
+
+	
+

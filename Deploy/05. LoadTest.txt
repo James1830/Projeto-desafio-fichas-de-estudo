@@ -1,0 +1,4 @@
+O Loadtest é uma ferramenta para fazer teste de carga na aplicação;
+
+- Para rodar um teste no Loadtest: loadtest -c 100 15 <url da aplicação a ser testada>;
+	Nesse caso "100" é o número de usuários que está sendo simulado na aplicação, "15" é o tempo que vai durar o teste aplicado e está em segundos;

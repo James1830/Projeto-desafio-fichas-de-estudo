@@ -1,0 +1,6 @@
+
+
+sudo apt-get install nginx (instala o servidor do nginx, ele ficará à frente da aplicação como um todo);
+sudo ufw allow 'Nginx Full' (para habilitar as portas 80 e 443 para o Nginx por meio do perfil que ele traz);
+sudo ufw status (para checar se essas regras foram aplicadas);
+systemctl status nginx (checa o status do nginx);

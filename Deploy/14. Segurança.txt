@@ -1,0 +1,4 @@
+
+
+- Instalar na aplicação a lib do token: npm i jsonwebtoken -P -E;
+- Instalar os tipos para TypeScript: npm i @types/jsonwebtoken -D -E;

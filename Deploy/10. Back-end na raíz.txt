@@ -1,0 +1,13 @@
+
+
+- O próprio nginx irá servir o conteúdo estático (front-end);
+- Mover o front-end para a pasta de conteúdo estático do nginx: sudo mv pasta -d /var/www/html;
+- Acessar o arquivo de configuração do nginx: sudo nano /etc/nginx/sites-available/default;
+- Editar uma diretiva chamada "location" que fica dentro da diretiva "server";
+	- Colocar "api/" após a barra do "location", colocar "/" depois do número da porta no "proxy_pass";
+	- Adicionar três linhas de diretivas:
+		sub_filter '"/' '"https://dominiodaaplicação.com/api/';
+		sub_filter_types application/json;
+		sub_filter_once off;
+	- Para se certificar que não quebrou o arquivo de configuração do nginx: sudo nginx -t;
+	- Restartar o nginx: sudo systemctl reload nginx;

@@ -1,0 +1,48 @@
+
+
+- Criar um arquivo chamado .gitlab-ci.yml;
+- Ele deve possuir as seguintes diretivas:
+
+stages:
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+test:
+  stage: test
+  image: beevelop/nodejs-python
+  variables:
+    SERVER_PORT: 3001
+    DB_URL: "mongodb://mongo/meatapi"
+  services:
+    - mongo
+  script:
+    - npm i
+    - npm test
+
+deploy:
+  stage: deploy
+  image: rastasheep/ubuntu-sshd
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo "$DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - eval "$(ssh-agent -s)"
+    - ssh-add ~/.ssh/id_rsa
+    - ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
+  script:
+    - ssh deploy@$DEPLOY_SERVER "source ~/.nvm/nvm.sh; cd meat-api; git pull; npm i; npm run build; cd; pm2 startOrReload ecosystem.config.js"
+
+
+- Pegar o conteúdo da chave privada para levar para o git-lab: cat ~/.ssh/id_rsa;
+	- Todo o trecho deve ser copiado, começando por "BEGIN RSA PRIVATE KEY" e terminando por "END RSA PRIVATE KEY";
+	Ir no git-lab em "Settings" > "Secret Variables" > "Expand" e cria no 1º campo de texto uma variável, pode se chamar "DEPLOY_KEY", no campo seguinte cola a chave privada;
+	Nos campos debaixo, no 1º, uma variável "DEPLOY_SERVER" e no campo seguinte a url do servidor;
+	Clica em "Save variables" e em "Hide values", isso ocultará os dados;
+	Essas variáveis serão utilizadas no arquivo .gitlab-ci-yml;
+
+
+- Para as pipe-lines rodarem corretamente é necessário ir no git-lab em "Settings" > "Runners settings" > "Expand" e habilitar a sessão "Shared runners";

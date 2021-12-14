@@ -1,0 +1,63 @@
+
+
+- Para gerar um par de chaves pública e privada: ssh-keygen;
+- Para pegar a chave pública: cat ~/.ssh/id_rsa.pub;
+- Levar a chave pública para o git-lab, ir para a home do projeto, marcar a opção "ssh" e copiar a url, após isso, voltar para o Putty e dar o seguinte comando:
+	git clone <url>;
+	- Confirma a confiabilidade para os arquivos serem puxados, das próximas vezes em que os arquivos precisarem ser atualizados, entrar na pasta e inserir: git pull;
+OBS: Ao entrar pela primeira vez na pasta do projeto: npm i; (os pacotes serão instalados);
+- Instalando o Nestjs: npm i -g @nestjs/cli;
+- Instalando o Swagger: npm install --save @nestjs/swagger fastify-swagger
+- No "package.json" inserir em "scripts" o "build": "tsc", após validar isso no repositório e fazer um "pull" no servidor: npm run build;
+
+Ex: Copiar arquivo: cp caminho/pasta arquivo.extensão;
+Ex: Acessar edição de arquivo: nano arquivo.extensão;
+
+Ex: ecosystem.config.js para produção:
+
+module.exports = {
+
+	apps: [{
+
+		name: "camfriolog",
+		script: "./home/james/dist/main.js", //<o que deve ser startado pelo pm2>
+		instances: 0, //<número de instâncias que irão subir>
+		exec_mode: "cluster", //<modo de execução>
+		env: {
+
+			SERVER_PORT: 3000,
+			DB_URL: '192.241.155.71:3306',
+			NODE_ENV: "production"
+
+		}
+	}]
+
+}
+
+- Para iniciar a aplicação: pm2 start ecosystem.config.js
+	- Para checar se houveram restarts: pm2 ls;
+	- Para checar o status da aplicação: pm2 logs;
+- Acessar o arquivo de edição de sites do nginx para reencaminhar as requisições:
+	sudo nano /etc/nginx/sites-available/default
+	Procurar uma diretiva dentro de # Server chamada "location /" e trocar a última linha que não possui # pelo seguinte:
+	proxy_pass http://localhost:3000;
+	proxy_http_version 1.1;
+	proxy_set_header Upgrade $http_upgrade;
+	proxy_set_header Connection 'upgrade';
+	proxy_set_header Hosts $hosts;
+	proxy_cache_bypass $http_upgrade;
+
+	- Para checar se o nginx validou o arquivo: sudo nginx -t;
+	- Após isso restartar o nginx: sudo systemctl reload nginx;
+- Colocar o pm2 para subir junto com a aplicação: pm2 startup systemd;
+	Vai ser gerado um comando, precisamos copiar esse comando e coloca-lo para executar;
+
+ssh-keyscan -t ecdsa camfriolog.com >> ~/.ssh/known_hosts
+ssh-keygen -R 192.241.155.71
+sed -e '8d' /home/james/.ssh/known_hosts
+
+
+    - ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
+
+
+

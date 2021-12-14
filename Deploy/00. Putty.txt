@@ -1,0 +1,18 @@
+Comandos linux que serão usados no Putty:
+	adduser <nome do usuário> (adiciona um usuário, informações serão requisitadas);
+	usermod -aG sudo <nome do usuário> (inclui o usuário no grupo "sudo");
+	su - <nome do usuário> (muda para o usuário indicado);
+	mkdir ~/.ssh (cria um diretório na raíz do servidor chamado .ssh);
+	chmod 700 ~/.ssh (dá direitos de leitura e escrita para esse diretório);
+	nano ~/.ssh/authorized_keys (cria um arquivo chamado "authorized_keys" no diretório .ssh, a chave pública deve ser copiada para esse arquivo);
+	nano /etc/ssh/sshd_config (acessa o arquivo de configuração do serviço de ssh da máquina);
+		- Para retirar o acesso remoto do usuário root é necessário alterar duas chaves nesse arquivo:
+		01. PermitRootLogin - Marcar "no";
+		02. PasswordAuthentication - Marcar "no";
+	sudo systemctl reload sshd (restarta o serviço de ssh da máquina);
+	sudo ufw allow OpenSSH (autoriza o protocolo ssh namáquina);
+	sudo ufw enable (habilita o ufw);
+		- Após isso pode fechar a sessão e acessar com a chave privada para testar;
+
+1830camFrio-LOG
+	

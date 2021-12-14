@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/ -->
+<html lang="en" style="height: auto;" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!--viewport-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--charset-->
+<!--rss-comments-->
+<link rel="alternate" type="application/rss+xml" href="https://www.lifeonnetwork.com/comments/feed/">
+<!--rss-->
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://www.lifeonnetwork.com/feed/">
+<!--atom-->
+<link rel="alternate" type="application/atom+xml" title="Atom" href="https://www.lifeonnetwork.com/feed/atom/">
+<!--pingback-->
+<link rel="pingback" href="https://www.lifeonnetwork.com/xmlrpc.php">
+
+<!--Facebook Open Graph-->
+
+	<!-- This site is optimized with the Yoast SEO plugin v15.1.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Install and configure Jasper Report Server on Ubuntu Server</title>
+	<meta name="description" content="Install and configure Jasper Report Server on Ubuntu Server">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Install and configure Jasper Report Server on Ubuntu Server">
+	<meta property="og:description" content="Install and configure Jasper Report Server on Ubuntu Server">
+	<meta property="og:url" content="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/">
+	<meta property="og:site_name" content="Life On Network">
+	<meta property="article:publisher" content="https://www.facebook.com/durgacharanojha">
+	<meta property="article:author" content="https://www.facebook.com/durgacharanojha">
+	<meta property="article:published_time" content="2014-10-10T13:07:59+00:00">
+	<meta property="article:modified_time" content="2017-07-25T08:46:21+00:00">
+	<meta property="og:image" content="https://www.lifeonnetwork.com/wp-content/uploads/2014/10/jasper.png">
+	<meta property="og:image:width" content="250">
+	<meta property="og:image:height" content="50">
+	<script src="./Install and configure Jasper Report Server on Ubuntu Server_files/sdk.js.download" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/recaptcha__pt_br.js.download" crossorigin="anonymous" integrity="sha384-nPmvgRpEo/tHu2c/JTvb4B18FPKKvYk8jBDdeAsotott5Qx7sWs2wCMemqKS+cXe"></script><script id="facebook-jssdk" src="./Install and configure Jasper Report Server on Ubuntu Server_files/sdk.js(1).download"></script><script async="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/analytics.js.download"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lifeonnetwork.com/#website","url":"https://www.lifeonnetwork.com/","name":"Life On Network","description":"Blogging troubleshooting solving computer issues","publisher":{"@id":"https://www.lifeonnetwork.com/#/schema/person/88f4b1fd5be350c53c5edbebb0edfaf7"},"potentialAction":[{"@type":"SearchAction","target":"https://www.lifeonnetwork.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#primaryimage","inLanguage":"en-US","url":"https://www.lifeonnetwork.com/wp-content/uploads/2014/10/jasper.png","width":250,"height":50,"caption":"https://www.lifeonnetwork.com/install-configure-jasper-report-server-ubuntu-server/"},{"@type":"WebPage","@id":"https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#webpage","url":"https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/","name":"Install and configure Jasper Report Server on Ubuntu Server","isPartOf":{"@id":"https://www.lifeonnetwork.com/#website"},"primaryImageOfPage":{"@id":"https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#primaryimage"},"datePublished":"2014-10-10T13:07:59+00:00","dateModified":"2017-07-25T08:46:21+00:00","description":"Install and configure Jasper Report Server on Ubuntu Server","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/"]}]},{"@type":"Article","@id":"https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#article","isPartOf":{"@id":"https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#webpage"},"author":{"@id":"https://www.lifeonnetwork.com/#/schema/person/88f4b1fd5be350c53c5edbebb0edfaf7"},"headline":"Install and configure Jasper Report Server on Ubuntu Server","datePublished":"2014-10-10T13:07:59+00:00","dateModified":"2017-07-25T08:46:21+00:00","mainEntityOfPage":{"@id":"https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#webpage"},"commentCount":"16","publisher":{"@id":"https://www.lifeonnetwork.com/#/schema/person/88f4b1fd5be350c53c5edbebb0edfaf7"},"image":{"@id":"https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#primaryimage"},"keywords":"install,Jasper Server,ubuntu","articleSection":"Linux,Windows","inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#respond"]}]},{"@type":["Person","Organization"],"@id":"https://www.lifeonnetwork.com/#/schema/person/88f4b1fd5be350c53c5edbebb0edfaf7","name":"Durga Charan Ojha","image":{"@type":"ImageObject","@id":"https://www.lifeonnetwork.com/#personlogo","inLanguage":"en-US","url":"https://www.lifeonnetwork.com/wp-content/uploads/2020/06/62571034.jpg","width":273,"height":351,"caption":"Durga Charan Ojha"},"logo":{"@id":"https://www.lifeonnetwork.com/#personlogo"},"description":"I am a proud Indian, proud father, a blogger, Being in a profession as System administrator, my passion is troubleshooting computer issues, I do like sharing solutions through blogging making videos of solving issues.","sameAs":["https://lifeonnetwork.com/","https://www.facebook.com/durgacharanojha"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Life On Network » Feed" href="https://www.lifeonnetwork.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Life On Network » Comments Feed" href="https://www.lifeonnetwork.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Life On Network » Install and configure Jasper Report Server on Ubuntu Server Comments Feed" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/feed/">
+<!-- This site uses the Google Analytics by ExactMetrics plugin v6.2.2 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var em_version         = '6.2.2';
+	var em_track_user      = true;
+	var em_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-1325957-2';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+
+	if ( 'undefined' === typeof gaOptout ) {
+		function gaOptout() {
+			__gaTrackerOptout();
+		}
+	}
+	
+	if ( em_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+window.ga = __gaTracker;		__gaTracker('create', 'UA-1325957-2', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+		__gaTracker( function() { window.ga = __gaTracker; } );
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + em_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+			window.ga = __gaTracker;		})();
+		}
+</script>
+<!-- / Google Analytics by ExactMetrics -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.lifeonnetwork.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Install and configure Jasper Report Server on Ubuntu Server_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="google-fonts-css" href="./Install and configure Jasper Report Server on Ubuntu Server_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="google-menu-fonts-css" href="./Install and configure Jasper Report Server on Ubuntu Server_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="google-widget-fonts-css" href="./Install and configure Jasper Report Server on Ubuntu Server_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="./Install and configure Jasper Report Server on Ubuntu Server_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./Install and configure Jasper Report Server on Ubuntu Server_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="style-css" href="./Install and configure Jasper Report Server on Ubuntu Server_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp_review-style-css" href="./Install and configure Jasper Report Server on Ubuntu Server_files/wp-review.css" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,ra,mp,avi,flv,mpeg,pdf,doc,ppt,xls,jp,png,gif,tiff,bmp,txt","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/www.lifeonnetwork.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/frontend.min.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/jquery.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var stepfoxcomplete = {"stepfoxcompleteurl":"https:\/\/www.lifeonnetwork.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/sf-autocomplete.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/jquery.flexslider-min.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/exm1-scripts.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/respond.min.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/smoothscroll.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/jquery.validate.min.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/comment_validate.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var exm1_live_video_ajax = {"exm1_live_video_ajaxurl":"https:\/\/www.lifeonnetwork.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/ajax-video-widget.js.download"></script>
+<link rel="https://api.w.org/" href="https://www.lifeonnetwork.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.lifeonnetwork.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.lifeonnetwork.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.4.2">
+<link rel="shortlink" href="https://www.lifeonnetwork.com/?p=346">
+<link rel="alternate" type="application/json+oembed" href="https://www.lifeonnetwork.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lifeonnetwork.com%2Flinux%2Finstall-configure-jasper-report-server-ubuntu-server%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.lifeonnetwork.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lifeonnetwork.com%2Flinux%2Finstall-configure-jasper-report-server-ubuntu-server%2F&amp;format=xml">
+
+
+<style type="text/css">
+.fullwidth-image:before{ box-shadow: inset 0 -327px 200px -200px #eeeeee;}
+.top-menu{background-color:#ffffff;}
+.top-menu-posts li .category-icon a{color:#a3a3a3;}
+.top-menu-posts .featured-posts-title a{color:#101010;}
+body, .small-title, .widget-title, .tv-featured-title{font-family:Montserrat;}
+.popular-part:before{background:#101010;box-shadow: 0 -999px 0 999px #101010;}
+.popular-slider-container .slides:before{background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,#101010 64%,#101010 100%);}
+.popular-part a, .popular-part .widget-title{color:#FFFFFF;}
+.read-more a{color:#e5192c;}
+.blog-post-content, .img-featured-text, .about-text, .exm1-blog-posts-subtitle, .flex-active-slide .slide-excerpt, .jumping-posts-excerpt, .combination-title-subtitle, .tv-widget-content, #post-content, #post-page-subtitle, .newsroll-posts-title a{font-family:Open Sans;}
+#footer{background:#101010; }
+#footer a, .copyright-text{color:#FFFFFF;}
+#footer a:hover{color:#e5192c;}
+.footer-wrap{border-color:#232323;}
+#main-nav ul li a, #mob-menu{font-family: Montserrat;}
+#wrapper, .footer-wrap{max-width:1290px;}
+#navigation .content-social, .top-menu, .big-logo, #navigation #searchform input, .sub-menu-wrapper, .ticker-box, #navigation{border-color:#eaeaea;}
+#site-logo, .about-logo, #mob-menu{background:#96ce1c;}
+#navigation, .ticker-box, .page-numbers.current, .about-social{background:#ffffff;}
+.menu-item .menu-link, #ticker a, .page-numbers.current, #navigation .submit-button, #navigation .content-social li a, .about-social a, .ticker-heading{color:#101010;}
+.subsignmeni:after{border-top: 8px solid #101010;}
+#main .widget-title, #main .widget-title a{color:#e5192c;}
+#main-nav ul li:hover > .menu-link, #ticker a:hover, #navigation .content-social li a:hover, .about-social a:hover, .sub-menu-wrapper .small-category li:hover > .small-text a{color:#e5192c;}
+.subsignmeni:hover:after{border-top: 8px solid #e5192c;}
+#main-nav ul li > .menu-link{font-weight:800;}
+.menu-link {font-size:15px;}
+.featured-category, .trending-title, .trending-posts, .page-numbers, input#wp-submit{background: #e5192c;}
+.newsroll-title, .exm1-blog-posts-thumb, .post-page-gallery-thumbnails .flex-active-slide:after, .flex-active .wide-slider-thumb:after{border-color:#e5192c;}
+.blog-post-author a, .exm1-blog-posts-author a, #recentcomments li, .widget_categories select, .widget_archive select, .sticky a{color:#e5192c;}
+
+#searchform .submit-button{background:#e5192c url(https://www.lifeonnetwork.com/wp-content/themes/examiner/images/search-icon-black.png) no-repeat center;}
+#navigation #searchform input{background-image:url(https://www.lifeonnetwork.com/wp-content/themes/examiner/images/search-icon-black.png);}
+#navigation #mob-menu #searchform input{background-image:url(https://www.lifeonnetwork.com/wp-content/themes/examiner/images/search-icon.png);}
+.mob-menu-button{background: url(https://www.lifeonnetwork.com/wp-content/themes/examiner/images/menu_icon.png) no-repeat 50% 50%; } 
+
+ul.tabs li.active{background:#ffffff;}
+ul.tabs li.active, ul.tabs li {border-color:#ffffff;}
+.tabs li.active h4 a{color:#101010;}
+
+.img-featured-review-score, .blog-post-categories, .jumping-posts li:hover .jumping-posts-text, .woocommerce input#searchsubmit, .super-slider-category, .floating-share-icons li, .pagination.pagination-load-more a, .slider-category{background:#e5192c;}
+.sub-meni .menu-links.inside-menu li{background: #ffffff;}
+.sub-meni .menu-links.inside-menu li a{color: #101010;}
+.sub-menu{border-color:#e5192c;}
+
+#post-content{font-size:16px;line-height:25.6px;}
+::selection{background:#e5192c;}
+::-moz-selection{background:#e5192c;}
+.load-circle{border-bottom:5px solid #e5192c;border-right:5px solid #e5192c;box-shadow: 0 0 35px #e5192c;}
+#wp-calendar #today{background:#e5192c !important;text-shadow:none;}
+.total-score, .score-width, li:hover .play-icon{background: #e5192c;}
+.jumping-posts li:hover .jumping-posts-text:before{border-bottom: 14px solid #e5192c;}
+.single-post #post-content.first-letter > p:first-of-type:first-letter{font-size:67px; color:#e5192c;float: left;line-height: 60px;margin-right: 15px;font-weight:800;}
+#post-page-title h1{text-transform:uppercase;}
+blockquote, q.left, q{border-left: 2px solid #e5192c;color:#e5192c;}
+.img-featured-review-score:before{border-top: 9px solid #e5192c;}
+.sub-meni .menu-links.inside-menu li:hover{background:#ffffff;}
+#main-nav .sub-meni .menu-links.inside-menu li:hover > .menu-link{color:#e5192c;}
+.ticker-arrows{background:#ffffff;box-shadow:-21px 0 30px #ffffff;}
+.widget-title {font-style: normal;font-weight:700;}
+
+.huge .img-featured-posts-image:after, .super-image:after, .super-slider li .super-slider-post:after, .super-slider li .super-slider-post:after, .img-featured-posts-image:before, .small-image:before, .wide-slider .slides li:after{ background: linear-gradient(45deg, #2a7ab7, #e5192c);opacity:0.5;}
+
+
+.post-author a, .post-author a:visited, .good-title, .bad-title, #post-content a, .trending-posts-category a, .category-tv-icon a, .ticker-sign, .category-icon a, .jumping-posts-category a, a:hover, .category-icon a:hover, .trending-posts-category a:hover, .featured-posts-title a:hover, #post-content a:hover, .blog-post-title h2 a:hover, .bypostauthor a:hover, .post-author a:hover, .most-commented-cateogory a, .most-commented-count a {color:#e5192c;}
+
+
+.content q.right{border-left:0;border-right: 2px solid #e5192c;color:#e5192c;}
+
+
+
+.widget.buddypress div.item-options a, .widget_display_stats dd{color:#e5192c;}
+#buddypress div.item-list-tabs ul li a span, #buddypress div.item-list-tabs ul li.current a span, #buddypress div.item-list-tabs ul li.selected a span, .widget.buddypress #bp-login-widget-form #bp-login-widget-submit, span.bp-login-widget-register-link a, button#user-submit, .bbp-login-form .bbp-login-links a, tt button.button.submit.user-submit, input#bbp_search_submit {background:#e5192c;}
+
+.image_fx1:hover:after{background: #e5192c;}
+
+.cart-top{background:url(https://www.lifeonnetwork.com/wp-content/themes/examiner/images/shopping-cart-icon-black.png) no-repeat 36px 0;}
+@media screen and (max-width: 700px) {#main-nav ul li {background:#ffffff;}.sub-menu-wrapper .menu-links.inside-menu .menu-link{color:#101010;}.menu-item{border-bottom:none !important;}}
+
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt, .woocommerce .widget_layered_nav_filters ul li a, .woocommerce-page .widget_layered_nav_filters ul li a, .woocommerce .widget_layered_nav ul li.chosen a, .woocommerce-page .widget_layered_nav ul li.chosen a, .woocommerce span.onsale, .woocommerce-page span.onsale, .woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before, .woocommerce .woocommerce-info:before, .woocommerce-page .woocommerce-info:before, .woocommerce table.cart a.remove:hover, .woocommerce #content table.cart a.remove:hover, .woocommerce-page table.cart a.remove:hover, .woocommerce-page #content table.cart a.remove:hover, .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce .widget_price_filter .ui-slider .ui-slider-range, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-range, .woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li{background:#e5192c;}
+
+.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price, .woocommerce div.product span.price, .woocommerce div.product p.price, .woocommerce #content div.product span.price, .woocommerce #content div.product p.price, .woocommerce-page div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page #content div.product p.price, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce #content input.button.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce #content input.button:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page #content input.button:hover, .woocommerce-page #main a.button:hover, .woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li, .woocommerce div.product .woocommerce-tabs ul.tabs .active a:hover, span.posted_in a, span.tagged_as a, .woocommerce h1.page-title, .woocommerce .jumping-posts .star-rating, .woocommerce-page .jumping-posts .star-rating, .amount, #header .cart-contents:hover, #header .cart-contents{color:#e5192c;}
+
+.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message, .woocommerce .woocommerce-info, .woocommerce-page .woocommerce-info{border-top:3px solid #e5192c; }
+
+.product_meta, .woocommerce div.product div.summary, .woocommerce #content div.product div.summary, .woocommerce-page div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce #reviews #comments ol.commentlist li .comment-text p, .woocommerce-page #reviews #comments ol.commentlist li .comment-text p, .woocommerce #review_form #respond p, .woocommerce-page #review_form #respond p, .woocommerce div.product .woocommerce-tabs .panel, .woocommerce #content div.product .woocommerce-tabs .panel, .woocommerce-page div.product .woocommerce-tabs .panel, .woocommerce-page #content div.product .woocommerce-tabs .panel, .woocommerce #reviews h3, .woocommerce-page #reviews h3{font-size:16px;line-height:25.6px;}
+
+</style><script type="text/javascript">
+			var slide_picker = 'slide';
+			var widget_fx = 'widgetfx-1';
+			var image_effect = 'image_fx5';
+	</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #eeeeee; }
+</style>
+	<link rel="icon" href="https://www.lifeonnetwork.com/wp-content/uploads/2018/10/500x500-1-65x65.png" sizes="32x32">
+<link rel="icon" href="https://www.lifeonnetwork.com/wp-content/uploads/2018/10/500x500-1-300x300.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.lifeonnetwork.com/wp-content/uploads/2018/10/500x500-1-300x300.png">
+<meta name="msapplication-TileImage" content="https://www.lifeonnetwork.com/wp-content/uploads/2018/10/500x500-1-300x300.png">
+<style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><link type="text/css" rel="stylesheet" charset="UTF-8" href="./Install and configure Jasper Report Server on Ubuntu Server_files/translateelement.css"></head>
+
+<body class="post-template-default single single-post postid-346 single-format-standard custom-background">
+<header id="header">
+		<div id="nav-wrapper">
+		<div id="navigation" class="show-menu">
+			<div id="site-logo">
+								<div class="big-logo">
+					<a href="https://www.lifeonnetwork.com/">
+					<img src="./Install and configure Jasper Report Server on Ubuntu Server_files/cropped-lon.png" height="140" width="308" alt="Life On Network">
+					</a>
+				</div>
+				<!--big-logo-->
+							</div>
+			<!--site-logo-->
+						<div class="top-menu">
+				<div class="top-menu-posts">
+	<ul>
+			<li class="widgetfx-1">				
+			<div class="featured-posts-image">
+								<a href="https://www.lifeonnetwork.com/sql-server/create-a-sql-server-linked-server-to-mysql-rds-running-in-aws/" title="Create a SQL Server Linked Server access to MySQL (RDS running in AWS)">
+				<div class="image_fx5"><img width="83" height="83" src="./Install and configure Jasper Report Server on Ubuntu Server_files/Linked_Server-83x83.jpg" class="attachment-small-thumb size-small-thumb wp-post-image" alt="" srcset="https://www.lifeonnetwork.com/wp-content/uploads/2020/04/Linked_Server-83x83.jpg 83w, https://www.lifeonnetwork.com/wp-content/uploads/2020/04/Linked_Server-150x150.jpg 150w, https://www.lifeonnetwork.com/wp-content/uploads/2020/04/Linked_Server-65x65.jpg 65w, https://www.lifeonnetwork.com/wp-content/uploads/2020/04/Linked_Server-111x111.jpg 111w" sizes="(max-width: 83px) 100vw, 83px"></div>				</a>
+							</div>
+			<!---featured-posts-image-->
+			<div class="featured-posts-text">
+				<span class="category-icon">
+				<a href="https://www.lifeonnetwork.com/category/sql-server/" title="SQL Server">SQL Server</a>				</span>
+				<div class="featured-posts-title">
+					<a href="https://www.lifeonnetwork.com/sql-server/create-a-sql-server-linked-server-to-mysql-rds-running-in-aws/" title="Create a SQL Server Linked Server access to MySQL (RDS running in AWS)">
+					Create a SQL Server Linked Server access to MySQL (RDS…					</a>
+				</div>
+				<!--featured-posts-title-->	
+			</div>
+			<!--featured-posts-text-->
+		</li>
+				<li class="widgetfx-1">				
+			<div class="featured-posts-image">
+								<a href="https://www.lifeonnetwork.com/windows/setup-metered-internet-connection-in-windows-10/" title="Setup metered Internet Connection in Windows 10">
+				<div class="image_fx5"><img width="83" height="83" src="./Install and configure Jasper Report Server on Ubuntu Server_files/metered-3-83x83.jpg" class="attachment-small-thumb size-small-thumb wp-post-image" alt="" srcset="https://www.lifeonnetwork.com/wp-content/uploads/2020/03/metered-3-83x83.jpg 83w, https://www.lifeonnetwork.com/wp-content/uploads/2020/03/metered-3-150x150.jpg 150w, https://www.lifeonnetwork.com/wp-content/uploads/2020/03/metered-3-65x65.jpg 65w, https://www.lifeonnetwork.com/wp-content/uploads/2020/03/metered-3-111x111.jpg 111w" sizes="(max-width: 83px) 100vw, 83px"></div>				</a>
+							</div>
+			<!---featured-posts-image-->
+			<div class="featured-posts-text">
+				<span class="category-icon">
+				<a href="https://www.lifeonnetwork.com/category/windows/windows-10/" title="#Windows 10">#Windows 10</a>				</span>
+				<div class="featured-posts-title">
+					<a href="https://www.lifeonnetwork.com/windows/setup-metered-internet-connection-in-windows-10/" title="Setup metered Internet Connection in Windows 10">
+					Setup metered Internet Connection in Windows 10					</a>
+				</div>
+				<!--featured-posts-title-->	
+			</div>
+			<!--featured-posts-text-->
+		</li>
+				<li class="widgetfx-1">				
+			<div class="featured-posts-image">
+								<a href="https://www.lifeonnetwork.com/windows/could-not-create-the-java-virtual-machine-error-a-fatal-exception-has-occurred/" title="Could not create the Java Virtual Machine Error A Fatal exception has occurred">
+				<div class="image_fx5"><img width="83" height="83" src="./Install and configure Jasper Report Server on Ubuntu Server_files/javaerror-Copy-83x83.png" class="attachment-small-thumb size-small-thumb wp-post-image" alt="" srcset="https://www.lifeonnetwork.com/wp-content/uploads/2020/02/javaerror-Copy-83x83.png 83w, https://www.lifeonnetwork.com/wp-content/uploads/2020/02/javaerror-Copy-150x150.png 150w, https://www.lifeonnetwork.com/wp-content/uploads/2020/02/javaerror-Copy-65x65.png 65w, https://www.lifeonnetwork.com/wp-content/uploads/2020/02/javaerror-Copy-298x302.png 298w, https://www.lifeonnetwork.com/wp-content/uploads/2020/02/javaerror-Copy-111x111.png 111w" sizes="(max-width: 83px) 100vw, 83px"></div>				</a>
+							</div>
+			<!---featured-posts-image-->
+			<div class="featured-posts-text">
+				<span class="category-icon">
+				<a href="https://www.lifeonnetwork.com/category/windows/" title="Windows">Windows</a>				</span>
+				<div class="featured-posts-title">
+					<a href="https://www.lifeonnetwork.com/windows/could-not-create-the-java-virtual-machine-error-a-fatal-exception-has-occurred/" title="Could not create the Java Virtual Machine Error A Fatal exception has occurred">
+					Could not create the Java Virtual Machine Error A Fatal…					</a>
+				</div>
+				<!--featured-posts-title-->	
+			</div>
+			<!--featured-posts-text-->
+		</li>
+			</ul>
+</div>
+<!-- top-menu-events -->
+ 				<div class="search-box">
+					<form method="get" id="searchform" action="https://www.lifeonnetwork.com/">
+	<input type="text" name="s" id="s" value="" autocomplete="off">
+	<button type="submit" class="submit-button">
+	</button>
+	<ul class="featured-thumbnails"></ul>
+</form>				</div>
+				<!--search-box-->
+			</div>
+			<!-- top-menu -->
+						<nav id="main-nav">
+				<div id="mob-menu">
+					<div class="mob-menu-button">
+					</div>
+					<!-- mob-menu-button -->
+					<a href="https://www.lifeonnetwork.com/">
+						<img src="./Install and configure Jasper Report Server on Ubuntu Server_files/cropped-lon.png" height="140" width="308" alt="Life On Network">
+					</a>
+					<div class="search-box">
+						<form method="get" id="searchform" action="https://www.lifeonnetwork.com/">
+	<input type="text" name="s" id="s" value="" autocomplete="off">
+	<button type="submit" class="submit-button">
+	</button>
+	<ul class="featured-thumbnails"></ul>
+</form>					</div>
+					<!--search-box-->
+
+				</div>
+				<!--mob-menu-->
+				<div class="menu-main_menu-container"><ul id="menu-main_menu" class="menu"><li id="menu-item-exm1796" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent"><a href="https://www.lifeonnetwork.com/category/windows/" title="Windows" class="menu-link">Windows</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/sql-server/create-a-sql-server-linked-server-to-mysql-rds-running-in-aws/" title="Create a SQL Server Linked Server access to MySQL (RDS…"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/Linked_Server-298x186.jpg" alt="Create a SQL Server Linked Server access to MySQL (RDS…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/sql-server/create-a-sql-server-linked-server-to-mysql-rds-running-in-aws/">Create a SQL Server Linked Server access to MySQL (RDS…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/windows/setup-metered-internet-connection-in-windows-10/" title="Setup metered Internet Connection in Windows 10"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/metered-3-298x186.jpg" alt="Setup metered Internet Connection in Windows 10"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/windows/setup-metered-internet-connection-in-windows-10/">Setup metered Internet Connection in Windows 10</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/windows/could-not-create-the-java-virtual-machine-error-a-fatal-exception-has-occurred/" title="Could not create the Java Virtual Machine Error A Fatal…"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/javaerror-Copy-298x186.png" alt="Could not create the Java Virtual Machine Error A Fatal…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/windows/could-not-create-the-java-virtual-machine-error-a-fatal-exception-has-occurred/">Could not create the Java Virtual Machine Error A Fatal…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/windows/how-to-fix-aw-snap-error-on-chrome-browser/" title="How to fix Aw snap error on chrome browser"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/ChromeError-298x186.png" alt="How to fix Aw snap error on chrome browser"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/windows/how-to-fix-aw-snap-error-on-chrome-browser/">How to fix Aw snap error on chrome browser</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/windows/windows-process-activation-service-failed-to-start/" title="Windows process activation service failed to start"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/1-298x186.jpg" alt="Windows process activation service failed to start"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/windows/windows-process-activation-service-failed-to-start/">Windows process activation service failed to start</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/windows/windows-cannot-be-installed-to-this-disk-the-selected-disk-has-an-mbr-partition-table/" title="Windows cannot be installed to this disk. the selected disk…"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/the-selected-disk-has-an-mbr-partition-table-01-298x186.png" alt="Windows cannot be installed to this disk. the selected disk…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/windows/windows-cannot-be-installed-to-this-disk-the-selected-disk-has-an-mbr-partition-table/">Windows cannot be installed to this disk. the selected disk…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm1797" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent"><a href="https://www.lifeonnetwork.com/category/linux/" title="Linux" class="menu-link">Linux</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/1368/" title="User is not in the sudoers file in CentOS"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/sudoers-298x186.png" alt="User is not in the sudoers file in CentOS"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/1368/">User is not in the sudoers file in CentOS</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/how-to-disable-ping-request-in-centos-server/" title="How to disable ping request in CentOS Server"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/ping-1-298x186.png" alt="How to disable ping request in CentOS Server"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/how-to-disable-ping-request-in-centos-server/">How to disable ping request in CentOS Server</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/without-sudo-login-to-mysql-server-in-ubuntu-18/" title="Without sudo login to mysql server in Ubuntu 18"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/download-225x186.png" alt="Without sudo login to mysql server in Ubuntu 18"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/without-sudo-login-to-mysql-server-in-ubuntu-18/">Without sudo login to mysql server in Ubuntu 18</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/user-is-not-in-the-sudoers-file-this-incident-will-be-reported/" title="User is not in the sudoers file. This incident will…"><div class="image_fx5"><img src="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" alt="User is not in the sudoers file. This incident will…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/user-is-not-in-the-sudoers-file-this-incident-will-be-reported/">User is not in the sudoers file. This incident will…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/phpstorm-running-out-of-memory-while-indexing-project/" title="PhpStorm running out of memory while indexing project"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/PhpStormError.png" alt="PhpStorm running out of memory while indexing project"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/phpstorm-running-out-of-memory-while-indexing-project/">PhpStorm running out of memory while indexing project</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/1805-column-count-of-mysql-user-is-wrong-expected-45-found-42-the-table-is-probably-corrupted/" title="#1805 – Column count of mysql.user is wrong expected 45…"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/mysqlUser.png" alt="#1805 – Column count of mysql.user is wrong expected 45…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/1805-column-count-of-mysql-user-is-wrong-expected-45-found-42-the-table-is-probably-corrupted/">#1805 – Column count of mysql.user is wrong expected 45…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm1798" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.lifeonnetwork.com/category/mac/" title="MAC" class="menu-link">MAC</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/mac/solution-ssh_exchange_identification-connection-closed-remote-host/" title="ssh exchange identification connection closed by remote host"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/mac.jpg" alt="ssh exchange identification connection closed by remote host"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/mac/solution-ssh_exchange_identification-connection-closed-remote-host/">ssh exchange identification connection closed by remote host</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/install-linux-as-guest-operating-system-on-oracle-vm-virtual-box-and-configure-port-forwarding/" title="Install Linux as Guest operating system on Oracle VM Virtual…"><div class="image_fx5"><img src="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" alt="Install Linux as Guest operating system on Oracle VM Virtual…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/install-linux-as-guest-operating-system-on-oracle-vm-virtual-box-and-configure-port-forwarding/">Install Linux as Guest operating system on Oracle VM Virtual…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/to-take-backup-and-restore-mozilla-thunderbird-mail-client-windowsubuntumac/" title="To take backup and restore Mozilla Thunderbird mail client (Windows/Ubuntu/Mac)"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/thunderbird2.jpg" alt="To take backup and restore Mozilla Thunderbird mail client (Windows/Ubuntu/Mac)"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/to-take-backup-and-restore-mozilla-thunderbird-mail-client-windowsubuntumac/">To take backup and restore Mozilla Thunderbird mail client (Windows/Ubuntu/Mac)</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/mac/installation-of-mysql-server-on-mac-and-my-cnf-file-does-not-exist-error-on-mysql-workbench/" title="Installation of MySql Server on MAC and my.cnf file does…"><div class="image_fx5"><img src="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" alt="Installation of MySql Server on MAC and my.cnf file does…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/mac/installation-of-mysql-server-on-mac-and-my-cnf-file-does-not-exist-error-on-mysql-workbench/">Installation of MySql Server on MAC and my.cnf file does…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/mac/how-to-run-wmv-video-file-in-mac/" title="How to run .wmv video file in MAC"><div class="image_fx5"><img src="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" alt="How to run .wmv video file in MAC"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/mac/how-to-run-wmv-video-file-in-mac/">How to run .wmv video file in MAC</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/mac/51/" title="Importing MAC mail.app messages to Thunderbird mail client"><div class="image_fx5"><img src="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" alt="Importing MAC mail.app messages to Thunderbird mail client"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/mac/51/">Importing MAC mail.app messages to Thunderbird mail client</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm1799" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.lifeonnetwork.com/category/sql-server/" title="SQL Server" class="menu-link">SQL Server</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/sql-server/create-a-sql-server-linked-server-to-mysql-rds-running-in-aws/" title="Create a SQL Server Linked Server access to MySQL (RDS…"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/Linked_Server-298x186.jpg" alt="Create a SQL Server Linked Server access to MySQL (RDS…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/sql-server/create-a-sql-server-linked-server-to-mysql-rds-running-in-aws/">Create a SQL Server Linked Server access to MySQL (RDS…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/reviews/kernel-for-sql-recovery-mvp-product-review/" title="Kernel for SQL Recovery MVP Product Review"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/lifeon_sqlbanner-298x186.jpg" alt="Kernel for SQL Recovery MVP Product Review"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/reviews/kernel-for-sql-recovery-mvp-product-review/">Kernel for SQL Recovery MVP Product Review</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/reviews/product-review-stellar-phoenix-sql-database-repair/" title="Product Review: Stellar Phoenix SQL Database Repair"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/Stellar3.jpg" alt="Product Review: Stellar Phoenix SQL Database Repair"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/reviews/product-review-stellar-phoenix-sql-database-repair/">Product Review: Stellar Phoenix SQL Database Repair</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/windows/an-error-occurred-when-attaching-the-databases-click-the-hyperlink-in-the-message-column-for-details/" title="An error occurred when attaching the database(s). Click the hyperlink…"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/Error.png" alt="An error occurred when attaching the database(s). Click the hyperlink…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/windows/an-error-occurred-when-attaching-the-databases-click-the-hyperlink-in-the-message-column-for-details/">An error occurred when attaching the database(s). Click the hyperlink…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/sql-server/restore-database-using-sql-management-studio/" title="How to Restore Database using SQL Management Studio"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/sqlrestore.jpg" alt="How to Restore Database using SQL Management Studio"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/sql-server/restore-database-using-sql-management-studio/">How to Restore Database using SQL Management Studio</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/sql-server/backup-database-using-sql-management-studio/" title="How to Backup a Database using SQL Management Studio"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/login.png" alt="How to Backup a Database using SQL Management Studio"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/sql-server/backup-database-using-sql-management-studio/">How to Backup a Database using SQL Management Studio</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm1800" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.lifeonnetwork.com/category/virtual-machine/" title="Virtual Machine" class="menu-link">Virtual Machine</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/linux/install-linux-as-guest-operating-system-on-oracle-vm-virtual-box-and-configure-port-forwarding/" title="Install Linux as Guest operating system on Oracle VM Virtual…"><div class="image_fx5"><img src="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" alt="Install Linux as Guest operating system on Oracle VM Virtual…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/linux/install-linux-as-guest-operating-system-on-oracle-vm-virtual-box-and-configure-port-forwarding/">Install Linux as Guest operating system on Oracle VM Virtual…</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm11061" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.lifeonnetwork.com/category/reviews/" title="Reviews" class="menu-link">Reviews</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/reviews/kernel-for-sql-recovery-mvp-product-review/" title="Kernel for SQL Recovery MVP Product Review"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/lifeon_sqlbanner-298x186.jpg" alt="Kernel for SQL Recovery MVP Product Review"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/reviews/kernel-for-sql-recovery-mvp-product-review/">Kernel for SQL Recovery MVP Product Review</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/reviews/product-review-stellar-phoenix-sql-database-repair/" title="Product Review: Stellar Phoenix SQL Database Repair"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/Stellar3.jpg" alt="Product Review: Stellar Phoenix SQL Database Repair"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/reviews/product-review-stellar-phoenix-sql-database-repair/">Product Review: Stellar Phoenix SQL Database Repair</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="https://www.lifeonnetwork.com/reviews/stellar-ost-pst-converter/" title="Stellar OST to PST converter"><div class="image_fx5"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/stellar1.jpg" alt="Stellar OST to PST converter"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<a href="https://www.lifeonnetwork.com/reviews/stellar-ost-pst-converter/">Stellar OST to PST converter</a>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+</ul></div>		
+		<div class="content-social">
+			<ul>
+								<li>
+					<a href="https://www.facebook.com/lifeonnetwork/" class="fb-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="https://twitter.com/durgacharanojha" class="twitter-social-icon" target="_blank">
+					</a>
+				</li>
+																				<li>
+					<a href="http://www.linkedin.com/in/durgacharanojha" class="linkedin-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="https://www.youtube.com/channel/UCF4yo-pVRkr947utSZ-Q7jg" class="youtube-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="https://www.lifeonnetwork.com/feed/rss/" class="rss-social-icon">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--content-social-->
+						
+			</nav>
+			<!--main-nav-->
+		</div>
+		<!--navigation-->
+	</div>
+	<!--nav-wrapper-->
+</header>
+<!--header-->
+<section id="wrapper" class="hfeed">
+<div id="main" style="opacity: 1;">
+
+<div id="post-346" class="post-346 post type-post status-publish format-standard has-post-thumbnail hentry category-linux category-windows tag-install tag-jasper-server tag-ubuntu">
+	 	
+	<div id="post-page-title">
+		<h1>
+			Install and configure Jasper Report Server on Ubuntu Server		</h1>
+	</div>
+	<!--post-page-title-->
+	<div id="post-page-subtitle">
+		<div class="row"></div>Install and configure Jasper Report Server on Ubuntu Server (Configuring through terminal/putty) Type the below command to start the download $ wget -c http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%205.6.0/jasperreports-server-cp-5.6.0-linux-x64-installer.run Give permission to run as...	</div>
+	<!--post-subtitle-->
+			<div id="primary">
+						<div id="media-wrapper">
+			<div class="image-wrapper"><img width="250" height="50" src="./Install and configure Jasper Report Server on Ubuntu Server_files/jasper.png" class="attachment-slider-three size-slider-three wp-post-image" alt="https://www.lifeonnetwork.com/install-configure-jasper-report-server-ubuntu-server/"></div><!--image-wrapper-->		</div>
+		<!--media-wrapper-->
+							<div class="post-page-content-wrapper">
+							<div class="post-info">
+									<span class="post-author">
+					by					<a href="https://www.lifeonnetwork.com/author/durga-charan-ojha/" title="Posts by Durga Charan Ojha" rel="author">Durga Charan Ojha</a>					</span>	
+					<span class="post-page-date">
+					October 10, 2014					</span>
+											
+				</div>
+				<!--post-info-->
+					
+				<div class="floating-share-icons" style="height: 1728px;">
+	<ul style="position: absolute; top: 20px; bottom: auto;">
+		<li>
+			<a href="http://www.facebook.com/sharer.php?u=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" target="blank" class="fb-social-float-icon" title="Share this post on Facebook" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+		<li>
+			<a href="https://twitter.com/intent/tweet?original_referer=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/&amp;text=Install%20and%20configure%20Jasper%20Report%20Server%20on%20Ubuntu%20Server&amp;tw_p=tweetbutton&amp;url=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" target="_blank" class="twitter-social-float-icon" title="Share this post on Twitter" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+		<li>
+			<a href="https://plusone.google.com/_/+1/confirm?hl=en-US&amp;url=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" target="_blank" class="google-social-float-icon" title="Share this post on Google Plus" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+		<li>
+			<a href="http://pinterest.com/pin/create/button/?media=https://www.lifeonnetwork.com/wp-content/uploads/2014/10/jasper.png&amp;url=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/&amp;is_video=false&amp;description=Install+and+configure+Jasper+Report+Server+on+Ubuntu+Server" target="_blank" class="pinterest-social-float-icon" title="Share this post on Pinterest" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+		<li>
+			<a href="http://www.reddit.com/submit?url=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/&amp;title=Install+and+configure+Jasper+Report+Server+on+Ubuntu+Server" target="_blank" class="reddit-social-float-icon" title="Share this post on Reddit" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- floating-share-icons -->
+				<div id="post-content" class="content  ">
+					<div class="row"></div><h4><strong>Install and configure Jasper Report Server on Ubuntu Server</strong></h4>
+<h4><strong>(Configuring through terminal/putty)</strong></h4>
+<h4><strong>Type the below command to start the download</strong></h4>
+<pre class="lang:default decode:true">$ wget -c http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%205.6.0/jasperreports-server-cp-5.6.0-linux-x64-installer.run</pre>
+<p>Give permission to run as super user</p>
+<pre>$ chmod a+x jasperreports-server-cp-5.6.0-linux-x64-installer.run</pre>
+<p>To start the Jasper server installation</p>
+<pre>$ sudo ./jasperreports-server-cp-5.6.0-linux-x64-installer.run</pre>
+<p>It will show you the license page. Read through it and select y when it prompts</p>
+<p>Do you accept this license? [y/n]: <strong>y</strong> shows up.</p>
+<p>It will ask&nbsp;to choose complete install or custom install. <strong>Choose custom</strong>.</p>
+<p>It will ask&nbsp;to select a folder for install destination.</p>
+<p><strong>choose the default /opt/jasperreports-server-cp-5.6.0.</strong></p>
+<p>It will ask you to use bundled tomcat or existing one.<strong> Choose bundled.</strong></p>
+<p>Leave the tomcat port as default else assign one like – 8088</p>
+<p>Assign one shutdown port as – 8089</p>
+<p>Choose <strong>Postgresql as Bundled and default port as – 5432</strong></p>
+<p>Choose to create sample database and proceed</p>
+<p>Now after Jasper Server installation <strong>lets start Tomcat server</strong></p>
+<pre>$ /opt/jasperreports-server-cp-5.6.0/ctlscript.sh start</pre>
+<p><strong>Setup plsql query adapter</strong><br>
+Download extensions for jasperreports-extension</p>
+<pre>$ wget -c http://www.java2s.com/Code/JarDownload/jasperreports/jasperreports-extensions-3.5.3.jar.zip</pre>
+<p>Unzip jasperreports-extensions-3.5.3.jar.zip</p>
+<pre>sudo unzip&nbsp;jasperreports-extensions-3.5.3.jar.zip</pre>
+<p>Copy the jasperreports-extensions-3.5.3.jar inside this folder /opt/jasperreports-server-cp-<br>
+5.6.0/apache-tomcat/webapps/jasperserver/WEB-INF/lib/</p>
+<p>Now cd /opt/jasperreports-server-cp-5.6.0/apache-tomcat/webapps/jasperserver/WEB-INF<br>
+and add one line to classes/jasperreports.properties</p>
+<pre>$ sudo vi classes/jasperreports.properties</pre>
+<address>net.sf.jasperreports.query.executer.factory.plsql=com.jaspersoft.jrx.query.PlSqlQueryExecuterFactory</address>
+<address>&nbsp;</address>
+<p>Then edit flows/queryBeans.xml. Change the line</p>
+<pre class="lang:default decode:true ">&lt;property name="queryLanguages" ref="queryLanguages"&gt;
+&lt;list&gt;
+&lt;value&gt;sql&lt;/value&gt;
+&lt;value&gt;plsql&lt;/value&gt;
+&lt;value&gt;hql&lt;/value&gt;
+&lt;/list&gt;
+&lt;/property&gt;</pre>
+<p>Then edit applicationContext.xml. Search for supportedQueryLanguages and add these to the following for&nbsp;PL/SQL Language. You will find supportedQueryLanguages in two places so add the below lines twice.</p>
+<pre class="lang:default decode:true ">&lt;value&gt;plsql&lt;/value&gt;
+&lt;value&gt;PLSQL&lt;/value&gt;</pre>
+<p>Now finally restart the Jasper Server.</p>
+<pre class="lang:default decode:true">$ /opt/jasperreports-server-cp-5.6.0/ctlscript.sh stop
+$ /opt/jasperreports-server-cp-5.6.0/ctlscript.sh start
+
+<strong>You may also like:</strong> <a class="mentionable" href="https://www.lifeonnetwork.com/mac/solution-ssh_exchange_identification-connection-closed-remote-host/" target="_self" data-mentionable="379">ssh exchange identification connection closed by remote host</a></pre>
+<div class="col-md-2 col-sm-4 col-xs-4"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+			<script>
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7';
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<style>
+			.col-md-2 {
+				float:left;
+				width: 16.6667%;
+			}
+			</style>
+			<div class="fb-like fb_iframe_widget" data-href="" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=142&amp;href=https%3A%2F%2Fwww.lifeonnetwork.com%2Flinux%2Finstall-configure-jasper-report-server-ubuntu-server%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true&amp;size=large"><span style="vertical-align: bottom; width: 67px; height: 28px;"><iframe name="f20994d9433162c" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Install and configure Jasper Report Server on Ubuntu Server_files/like.html" style="border: none; visibility: visible; width: 67px; height: 28px;" class=""></iframe></span></div></div><div class="col-md-2 col-sm-4 col-xs-4"><div id="fb-root"></div>
+			<script>
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7';
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			//tooltip
+			jQuery(document).ready(function(){
+				jQuery('[data-toggle='tooltip']').tooltip();   
+			});
+			</script>
+			<style>
+			.col-md-2 {
+				float:left;
+				width: 16.6667%;
+			}
+			</style>
+			<div class="fb-share-button fb_iframe_widget" data-href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" data-layout="button" data-size="large" data-mobile-iframe="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=142&amp;href=https%3A%2F%2Fwww.lifeonnetwork.com%2Flinux%2Finstall-configure-jasper-report-server-ubuntu-server%2F&amp;layout=button&amp;locale=en_US&amp;mobile_iframe=true&amp;sdk=joey&amp;size=large"><span style="vertical-align: bottom; width: 77px; height: 28px;"><iframe name="f34b18397996b64" width="1000px" height="1000px" data-testid="fb:share_button Facebook Social Plugin" title="fb:share_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Install and configure Jasper Report Server on Ubuntu Server_files/share_button.html" style="border: none; visibility: visible; width: 77px; height: 28px;" class=""></iframe></span></div></div><div class="col-md-2 col-sm-4 col-xs-4"><div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7';
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<style>
+			.col-md-2 {
+				float:left;
+				width: 16.6667%;
+			}
+			</style>
+			<div class="fb-follow" data-href="https://lifenonetwork.com" data-layout="button" data-size="large" data-show-faces="true">
+			</div></div>				</div>
+				<!--post-content-->
+																<div class="post-tags"><div class="tags-title">Tags</div><!--tags-title--><a href="https://www.lifeonnetwork.com/tag/install/" rel="tag">install</a><a href="https://www.lifeonnetwork.com/tag/jasper-server/" rel="tag">Jasper Server</a><a href="https://www.lifeonnetwork.com/tag/ubuntu/" rel="tag">ubuntu</a></div><!--post-tags--><div class="post-categories-wrapper"><div class="post-categories-title">Categories</div><span class="blog-post-categories"><a href="https://www.lifeonnetwork.com/category/linux/">Linux</a></span><span class="blog-post-categories"><a href="https://www.lifeonnetwork.com/category/windows/">Windows</a></span></div><!--post-categories-wrapper-->								<div class="share-post">
+					<div class="share-title">
+						SHARE THIS ARTICLE					</div>
+					<ul style="width: 745px;">
+						<li>
+							<a href="http://www.facebook.com/sharer.php?u=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" target="blank" class="fb-share-icon" title="Share this post on Facebook" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/intent/tweet?original_referer=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/&amp;text=Install%20and%20configure%20Jasper%20Report%20Server%20on%20Ubuntu%20Server&amp;tw_p=tweetbutton&amp;url=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" target="_blank" class="twitter-share-icon" title="Share this post on Twitter" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+						<li>
+							<a href="https://plusone.google.com/_/+1/confirm?hl=en-US&amp;url=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/" target="_blank" class="google-share-icon" title="Share this post on Google Plus" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+						<li>
+							<a href="http://pinterest.com/pin/create/button/?media=https://www.lifeonnetwork.com/wp-content/uploads/2014/10/jasper.png&amp;url=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/&amp;is_video=false&amp;description=Install+and+configure+Jasper+Report+Server+on+Ubuntu+Server" target="_blank" class="pinterest-share-icon" title="Share this post on Pinterest" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+						<li>
+							<a href="http://www.reddit.com/submit?url=https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/&amp;title=Install+and+configure+Jasper+Report+Server+on+Ubuntu+Server" target="_blank" class="reddit-share-icon" title="Share this post on Reddit" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--share-post-->
+																<div class="nav-next-prev">
+										<div class="nav-previous">
+						<div class="previous-article">
+														<a href="https://www.lifeonnetwork.com/linux/install-linux-as-guest-operating-system-on-oracle-vm-virtual-box-and-configure-port-forwarding/" rel="prev">OLDER ARTICLE</a>						</div>
+						<!--previous-article-->
+						<div class="previous-title">
+							<h2>
+								<a href="https://www.lifeonnetwork.com/linux/install-linux-as-guest-operating-system-on-oracle-vm-virtual-box-and-configure-port-forwarding/" rel="prev">Install Linux as Guest operating system on Oracle VM Virtual Box and configure Port Forwarding</a>							</h2>
+							<div class="post-date">
+								<span class="bypostauthor">
+								by								<a href="https://www.lifeonnetwork.com/author/durga-charan-ojha/">
+								Durga Charan Ojha								</a>
+								-
+								</span>
+								<span class="date-prev">
+								Oct 7, 2014								</span>
+							</div>
+							<!--post-date-->
+						</div>
+						<!--previous-title-->
+					</div>
+					<!--nav-previous-->
+										<div class="splitter">
+					</div>
+					<!--splitter-->
+										<div class="nav-next">
+						<div class="next-article">
+														<a href="https://www.lifeonnetwork.com/windows/make-bootable-pen-driveusb-drive-windows/" rel="next">NEXT ARTICLE</a>						</div>
+						<!--next-article-->
+						<div class="next-title">
+							<h2>
+								<a href="https://www.lifeonnetwork.com/windows/make-bootable-pen-driveusb-drive-windows/" rel="next">Make bootable pen drive/usb drive – windows</a>							</h2>
+							<div class="post-date">
+								<span class="bypostauthor">
+								by								<a href="https://www.lifeonnetwork.com/author/durga-charan-ojha/">
+								Durga Charan Ojha								</a>
+								-
+								</span>
+								<span class="date-next">
+								Dec 16, 2014								</span>
+							</div>
+							<!--post-date-->
+						</div>
+						<!--next-title-->
+					</div>
+					<!--nav-next-->
+									</div>
+				<!--nav-next-prev-->
+												<div id="author-info">
+					<div id="author-image">
+						<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5308f7ba6c4bdaa589989ec83bc962cf.jpeg" class="avatar avatar-96 photo" height="96" width="96">					</div>
+					<!--author-image-->
+					<div id="author-desc">
+						<h2>
+							<a href="https://www.lifeonnetwork.com/author/durga-charan-ojha/" title="Posts by Durga Charan Ojha" rel="author">Durga Charan Ojha</a>						</h2>
+						<div class="description-author">
+							I am a proud Indian, proud father, a blogger, 
+Being in a profession as System administrator, my passion is troubleshooting computer issues, I do like sharing solutions through blogging making videos of solving issues.						</div>
+						<!--description-author-->
+						<ul class="author-social">
+														<li>
+								<a href="https://www.facebook.com/durgacharanojha" class="fb-social-icon" target="_blank">
+								</a>
+							</li>
+																																																</ul>
+					</div>
+					<!--author-desc-->
+				</div>
+				<!--author-info-->
+												<div class="comments">
+					<div class="comment-count">
+	16 Comments on this post.</div>
+<!--comment-count-->
+
+<div class="discussion">
+	
+<li class="comment even thread-even depth-1" id="li-comment-5949">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/6c0c2e8400119808e68aa59b8d08c331.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		dilip	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		20 January 2016		at
+		12:55 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-5949" data-commentid="5949" data-postid="346" data-belowelement="comment-5949" data-respondelement="respond" aria-label="Reply to dilip">Leave a Reply</a>	<article id="comment-5949" class="comment">
+		<div class="comment-content content">
+			<p>I am trying to install jasperreport in unattended mode but facing some postgres issues. Can you please help</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-durga-charan-ojha bypostauthor odd alt depth-2" id="li-comment-5953">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5308f7ba6c4bdaa589989ec83bc962cf(1).jpeg" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		durga	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		21 January 2016		at
+		4:57 am	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-5953" data-commentid="5953" data-postid="346" data-belowelement="comment-5953" data-respondelement="respond" aria-label="Reply to durga">Leave a Reply</a>	<article id="comment-5953" class="comment">
+		<div class="comment-content content">
+			<p>Hi Dillip,<br>
+Will surely help you configuring Jasper Report here… Please do share the error and uptil which command you have tried and successful.</p>
+<p>Regards,<br>
+Durga</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-7278">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/dc91ae51b2c4ff6ba38cdf8553b1f835.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		fayssel yabahddou	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		1 September 2016		at
+		11:43 am	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7278" data-commentid="7278" data-postid="346" data-belowelement="comment-7278" data-respondelement="respond" aria-label="Reply to fayssel yabahddou">Leave a Reply</a>	<article id="comment-7278" class="comment">
+		<div class="comment-content content">
+			<p>hi Durga , can a integrate jasper report server with openNMS</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+
+<li class="comment odd alt thread-even depth-1" id="li-comment-7732">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/f532e8b2fd3266ab97277d56358a9e10.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		rajasekar	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		3 June 2017		at
+		12:17 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7732" data-commentid="7732" data-postid="346" data-belowelement="comment-7732" data-respondelement="respond" aria-label="Reply to rajasekar">Leave a Reply</a>	<article id="comment-7732" class="comment">
+		<div class="comment-content content">
+			<p>LATEST VERSION java ,postgres, tomcat version list   and how to install methode</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-durga-charan-ojha bypostauthor even depth-2" id="li-comment-7734">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5308f7ba6c4bdaa589989ec83bc962cf(1).jpeg" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		durga	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		5 June 2017		at
+		2:49 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7734" data-commentid="7734" data-postid="346" data-belowelement="comment-7734" data-respondelement="respond" aria-label="Reply to durga">Leave a Reply</a>	<article id="comment-7734" class="comment">
+		<div class="comment-content content">
+			<p>Hi Rajsekar,<br>
+here I found the latest version of Jasper report server released version<br>
+so the first wget url to download the Jasper report server is<br>
+<a href="http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%205.6.0/jasperreports-server-cp-6.3.0-linux-x64-installer.run" rel="nofollow ugc">http://downloads.sourceforge.net/project/jasperserver/JasperServer/JasperReports%20Server%20Community%20Edition%205.6.0/jasperreports-server-cp-6.3.0-linux-x64-installer.run</a></p>
+<p>rest you can follow the steps to install.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment odd alt depth-3" id="li-comment-7760">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/df64b53033fcc41bbb9cad7929b91895.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		kishore ch	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		12 July 2017		at
+		3:15 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7760" data-commentid="7760" data-postid="346" data-belowelement="comment-7760" data-respondelement="respond" aria-label="Reply to kishore ch">Leave a Reply</a>	<article id="comment-7760" class="comment">
+		<div class="comment-content content">
+			<p>Hi Durga,</p>
+<p>I little bit confusion tomcat …. i all ready have the tomcat installation in system.<br>
+But inside the jar folder there is another tomcat … i mean it is installed the other or ?.</p>
+<p>and also after starting the jasper …what is the url  i need to use to open in web.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-durga-charan-ojha bypostauthor even depth-4" id="li-comment-7761">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5308f7ba6c4bdaa589989ec83bc962cf(1).jpeg" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		durga	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		12 July 2017		at
+		3:36 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7761" data-commentid="7761" data-postid="346" data-belowelement="comment-7761" data-respondelement="respond" aria-label="Reply to durga">Leave a Reply</a>	<article id="comment-7761" class="comment">
+		<div class="comment-content content">
+			<p>Hi Kishore,<br>
+To check status of Tomcat<br>
+$ ps -ef | grep tomcat </p>
+<p>Do you think both are running on different port ?<br>
+$ sudo service tomcat7 status<br>
+you can either disable/turn off the service.</p>
+<p>Web log in for Jasper, can try with the port number.<br>
+http://<hostname>:8080/jasperserver-pro</hostname></p>
+<p>Regards,<br>
+Durga</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-7784">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/73b47e8e624d2a04f975fa8a612a5982.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		venkata	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		18 October 2017		at
+		3:11 am	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7784" data-commentid="7784" data-postid="346" data-belowelement="comment-7784" data-respondelement="respond" aria-label="Reply to venkata">Leave a Reply</a>	<article id="comment-7784" class="comment">
+		<div class="comment-content content">
+			<p>Hi Durga,</p>
+<p>is it really necessary to install tomcat , prior to installing jasperreports-server-cp-6.3.0-linux-x64-installer.run,  as I have a tomcat installed on 8080, and when I ran this  jasperreports-server-cp-6.3.0-linux-x64-installer.run it again asked me for port then I gave 8081. now which one will the jasper use. </p>
+<p>Thanks,<br>
+Venkata</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-durga-charan-ojha bypostauthor even depth-2" id="li-comment-7786">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5308f7ba6c4bdaa589989ec83bc962cf(1).jpeg" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Durga Charan Ojha	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		23 October 2017		at
+		6:46 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7786" data-commentid="7786" data-postid="346" data-belowelement="comment-7786" data-respondelement="respond" aria-label="Reply to Durga Charan Ojha">Leave a Reply</a>	<article id="comment-7786" class="comment">
+		<div class="comment-content content">
+			<p>Hi Venkata, Jasper report with Tomcat bundled will install Tomcat.. if you have already installed then you can skip installing it. I would suggest to go with bundled one comes with Jasper report.</p>
+<p>Regards,<br>
+Durga</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment odd alt thread-even depth-1" id="li-comment-7803">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/d9e159731b42b79d9be77a4653bd31f4.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		krishna	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		22 November 2017		at
+		7:43 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7803" data-commentid="7803" data-postid="346" data-belowelement="comment-7803" data-respondelement="respond" aria-label="Reply to krishna">Leave a Reply</a>	<article id="comment-7803" class="comment">
+		<div class="comment-content content">
+			<p>Hi could you please provide ur contact number. I have some doubts in Jasper report software installtion in Linux using putty.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-durga-charan-ojha bypostauthor even depth-2" id="li-comment-7804">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5308f7ba6c4bdaa589989ec83bc962cf(1).jpeg" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Durga Charan Ojha	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		23 November 2017		at
+		3:44 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7804" data-commentid="7804" data-postid="346" data-belowelement="comment-7804" data-respondelement="respond" aria-label="Reply to Durga Charan Ojha">Leave a Reply</a>	<article id="comment-7804" class="comment">
+		<div class="comment-content content">
+			<p>Hi Krishna,<br>
+Got your number in mail ..will call you asap.</p>
+<p>Thanks<br>
+Durga</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-7846">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5cf0e971d372c3fd85dbdaaf073842bd.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Titto Xavier	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		30 January 2018		at
+		10:06 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7846" data-commentid="7846" data-postid="346" data-belowelement="comment-7846" data-respondelement="respond" aria-label="Reply to Titto Xavier">Leave a Reply</a>	<article id="comment-7846" class="comment">
+		<div class="comment-content content">
+			<p>I got a warning “problem running post-installation step. Installation may not complete correctly ” as a prompt.<br>
+So I can’t get the url  “http:localhost:port/”</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-durga-charan-ojha bypostauthor even depth-2" id="li-comment-7847">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5308f7ba6c4bdaa589989ec83bc962cf(1).jpeg" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Durga Charan Ojha	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		30 January 2018		at
+		10:55 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-7847" data-commentid="7847" data-postid="346" data-belowelement="comment-7847" data-respondelement="respond" aria-label="Reply to Durga Charan Ojha">Leave a Reply</a>	<article id="comment-7847" class="comment">
+		<div class="comment-content content">
+			<p>Hi Titto Xavier<br>
+Can you please share more details. screenshot of the error also will help me to get the solution.<br>
+Regards,<br>
+Durga</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment odd alt thread-even depth-1" id="li-comment-8099">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/24b125dd1a816cc9ca0a9e339be28855.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Soumya	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		15 February 2019		at
+		9:29 pm	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-8099" data-commentid="8099" data-postid="346" data-belowelement="comment-8099" data-respondelement="respond" aria-label="Reply to Soumya">Leave a Reply</a>	<article id="comment-8099" class="comment">
+		<div class="comment-content content">
+			<p>Hi Durga,</p>
+<p>Could you please share me the steps to install Jasper server only with Oracle database.</p>
+<p>Regards<br>
+Soumya</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-8417">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/7e107ca26453697e2c81424d82d1b7ef.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Malavika	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		6 August 2019		at
+		10:04 am	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-8417" data-commentid="8417" data-postid="346" data-belowelement="comment-8417" data-respondelement="respond" aria-label="Reply to Malavika">Leave a Reply</a>	<article id="comment-8417" class="comment">
+		<div class="comment-content content">
+			<p>sudo ./jasperreports-server-cp-5.6.0-linux-x64-installer.run<br>
+./jasperreports-server-cp-5.6.0-linux-x64-installer.run: 1: ./jasperreports-server-cp-5.6.0-linux-x64-installer.run: Syntax error: “(” unexpected</p>
+<p>Some Error, please help</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-durga-charan-ojha bypostauthor odd alt depth-2" id="li-comment-8418">
+	<div class="gravatar-comment">
+		<img alt="" src="./Install and configure Jasper Report Server on Ubuntu Server_files/5308f7ba6c4bdaa589989ec83bc962cf(1).jpeg" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Durga Charan Ojha	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		6 August 2019		at
+		10:56 am	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#comment-8418" data-commentid="8418" data-postid="346" data-belowelement="comment-8418" data-respondelement="respond" aria-label="Reply to Durga Charan Ojha">Leave a Reply</a>	<article id="comment-8418" class="comment">
+		<div class="comment-content content">
+			<p>Hi Malavika,<br>
+Will you please let me know the Ubuntu version ?</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+	<div class="comment-pagination">
+			</div>
+	<!--comment-pagination-->
+</div>
+<!--discussion-->
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.lifeonnetwork.com/linux/install-configure-jasper-report-server-ubuntu-server/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.lifeonnetwork.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="novalidate"><p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true"></textarea></p><p class="comment-author"><label for="author">Name</label> <span class="required" aria-required="true">*</span><input id="author" name="author" type="text" value="" size="30" aria-required="&#39;true&#39;"></p>
+<p class="comment-email"><label for="email">Email</label> <span class="required" aria-required="true">*</span><input id="email" name="email" type="text" value="" size="30" aria-required="&#39;true&#39;"></p>
+<p class="comment-url"><label for="url">Website</label><input id="url" name="url" type="text" value=""></p>
+<div class="anr_captcha_field"><div id="anr_captcha_field_1" class="anr_captcha_field_div"><div style="width: 304px; height: 78px;"><div><iframe src="./Install and configure Jasper Report Server on Ubuntu Server_files/anchor.html" width="304" height="78" role="presentation" name="a-jnwcp65ecfgy" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./Install and configure Jasper Report Server on Ubuntu Server_files/saved_resource(1).html"></iframe></div></div><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post comment"> <input type="hidden" name="comment_post_ID" value="346" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div><!-- #respond -->
+					</div>
+				<!--comments-->
+							</div>
+			<!--post-page-contentn-wrapper-->
+		</div>
+		<!--primary-->
+		
+		<div id="secondary" class="widget-area stickylastwidget">
+					</div>
+		<!--secondary-->
+	</div>
+	<!--post-->
+		<div class="fullwidth">
+		<div class="home-widget four-parts">
+						<h3>
+				<span class="widget-title">
+				RELATED BY				</span>
+			</h3>
+			<div class="blog-category">
+	<ul>			 				 
+											
+		<li>		
+			<div class="blog-post-image">
+								<a href="https://www.lifeonnetwork.com/sql-server/create-a-sql-server-linked-server-to-mysql-rds-running-in-aws/" title="Create a SQL Server Linked Server access to MySQL (RDS running in AWS)">
+				<div class="image_fx5"><img width="298" height="186" src="./Install and configure Jasper Report Server on Ubuntu Server_files/Linked_Server-298x186.jpg" class="attachment-small-blog size-small-blog wp-post-image" alt="" srcset="https://www.lifeonnetwork.com/wp-content/uploads/2020/04/Linked_Server-298x186.jpg 298w, https://www.lifeonnetwork.com/wp-content/uploads/2020/04/Linked_Server-320x200.jpg 320w" sizes="(max-width: 298px) 100vw, 298px"></div>				</a>
+							</div>
+			<!--blog-post-image-->
+			<div class="category-icon">
+				<a href="https://www.lifeonnetwork.com/category/sql-server/" title="SQL Server">SQL Server</a>			</div>
+			<!--featured-category-->
+			<div class="blog-post-title-box">
+				<div class="blog-post-title">
+					<h2>
+						<a href="https://www.lifeonnetwork.com/sql-server/create-a-sql-server-linked-server-to-mysql-rds-running-in-aws/">
+						Create a SQL Server Linked Server access to MySQL (RDS running in AWS)						</a>
+					</h2>
+				</div>
+				<!--blog-post-title-->
+			</div>
+			<!--blog-post-title-box-->
+			<div class="blog-post-content">
+				<div class="row"></div>Create a SQL Server Linked Server to MySQL (RDS running in AWS) We have running MYSQL at Amazon RDS and need to connect it creating a linked server using...			</div>
+			<!--blog-post-content-->
+		</li>											
+		<li>		
+			<div class="blog-post-image">
+								<a href="https://www.lifeonnetwork.com/windows/setup-metered-internet-connection-in-windows-10/" title="Setup metered Internet Connection in Windows 10">
+				<div class="image_fx5"><img width="298" height="186" src="./Install and configure Jasper Report Server on Ubuntu Server_files/metered-3-298x186.jpg" class="attachment-small-blog size-small-blog wp-post-image" alt="" srcset="https://www.lifeonnetwork.com/wp-content/uploads/2020/03/metered-3-298x186.jpg 298w, https://www.lifeonnetwork.com/wp-content/uploads/2020/03/metered-3-320x200.jpg 320w" sizes="(max-width: 298px) 100vw, 298px"></div>				</a>
+							</div>
+			<!--blog-post-image-->
+			<div class="category-icon">
+				<a href="https://www.lifeonnetwork.com/category/windows/windows-10/" title="#Windows 10">#Windows 10</a>			</div>
+			<!--featured-category-->
+			<div class="blog-post-title-box">
+				<div class="blog-post-title">
+					<h2>
+						<a href="https://www.lifeonnetwork.com/windows/setup-metered-internet-connection-in-windows-10/">
+						Setup metered Internet Connection in Windows 10						</a>
+					</h2>
+				</div>
+				<!--blog-post-title-->
+			</div>
+			<!--blog-post-title-box-->
+			<div class="blog-post-content">
+				<div class="row"></div>How to setup metered Internet Connection in Windows 10 and turn off background processes and updates to reduce data usage. When you are connected to a mobile hotspot or...			</div>
+			<!--blog-post-content-->
+		</li>											
+		<li>		
+			<div class="blog-post-image">
+								<a href="https://www.lifeonnetwork.com/windows/could-not-create-the-java-virtual-machine-error-a-fatal-exception-has-occurred/" title="Could not create the Java Virtual Machine Error A Fatal exception has occurred">
+				<div class="image_fx5"><img width="298" height="186" src="./Install and configure Jasper Report Server on Ubuntu Server_files/javaerror-Copy-298x186.png" class="attachment-small-blog size-small-blog wp-post-image" alt="" srcset="https://www.lifeonnetwork.com/wp-content/uploads/2020/02/javaerror-Copy-298x186.png 298w, https://www.lifeonnetwork.com/wp-content/uploads/2020/02/javaerror-Copy-320x200.png 320w" sizes="(max-width: 298px) 100vw, 298px"></div>				</a>
+							</div>
+			<!--blog-post-image-->
+			<div class="category-icon">
+				<a href="https://www.lifeonnetwork.com/category/windows/" title="Windows">Windows</a>			</div>
+			<!--featured-category-->
+			<div class="blog-post-title-box">
+				<div class="blog-post-title">
+					<h2>
+						<a href="https://www.lifeonnetwork.com/windows/could-not-create-the-java-virtual-machine-error-a-fatal-exception-has-occurred/">
+						Could not create the Java Virtual Machine Error A Fatal exception has occurred						</a>
+					</h2>
+				</div>
+				<!--blog-post-title-->
+			</div>
+			<!--blog-post-title-box-->
+			<div class="blog-post-content">
+				<div class="row"></div>Error: Could not create the Java Virtual Machine Error A Fatal exception has occurred, the program will exit. While after installing Eclipse Neon and JDK 1.8 I got the...			</div>
+			<!--blog-post-content-->
+		</li>											
+		<li>		
+			<div class="blog-post-image">
+								<a href="https://www.lifeonnetwork.com/windows/how-to-fix-aw-snap-error-on-chrome-browser/" title="How to fix Aw snap error on chrome browser">
+				<div class="image_fx5"><img width="298" height="186" src="./Install and configure Jasper Report Server on Ubuntu Server_files/ChromeError-298x186.png" class="attachment-small-blog size-small-blog wp-post-image" alt="" srcset="https://www.lifeonnetwork.com/wp-content/uploads/2019/12/ChromeError-298x186.png 298w, https://www.lifeonnetwork.com/wp-content/uploads/2019/12/ChromeError-320x200.png 320w" sizes="(max-width: 298px) 100vw, 298px"></div>				</a>
+							</div>
+			<!--blog-post-image-->
+			<div class="category-icon">
+				<a href="https://www.lifeonnetwork.com/category/windows/windows-10/" title="#Windows 10">#Windows 10</a>			</div>
+			<!--featured-category-->
+			<div class="blog-post-title-box">
+				<div class="blog-post-title">
+					<h2>
+						<a href="https://www.lifeonnetwork.com/windows/how-to-fix-aw-snap-error-on-chrome-browser/">
+						How to fix Aw snap error on chrome browser						</a>
+					</h2>
+				</div>
+				<!--blog-post-title-->
+			</div>
+			<!--blog-post-title-box-->
+			<div class="blog-post-content">
+				<div class="row"></div>How to fix Aw snap error on chrome browser Yes, it’s annoying while you addicted to one browser and that stopped working for some reason. Not even a single...			</div>
+			<!--blog-post-content-->
+		</li></ul>
+</div>
+		</div>
+		<!--home-widget-->
+	</div>
+	<!--fullwidth-->
+		</div>
+<!--main-->
+
+</section>
+<!--wrapper-->
+<footer id="footer">
+	<div class="footer-wrap">
+		<div class="footer-logo">
+			<a href="https://www.lifeonnetwork.com/">
+				<img src="./Install and configure Jasper Report Server on Ubuntu Server_files/ms-icon-150x150-1.png" alt="Life On Network">
+			</a>
+		</div>
+		<!--footer-logo-->
+		<nav id="bottom-menu">
+			<div class="menu-footer_menu-container"><ul id="menu-footer_menu" class="menu"><li id="menu-item-1221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221"><a href="https://www.lifeonnetwork.com/about-me/">About Me</a></li>
+<li id="menu-item-1220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1220"><a href="https://www.lifeonnetwork.com/seminar/">Seminar</a></li>
+<li id="menu-item-1216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216"><a href="https://www.lifeonnetwork.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1218"><a href="https://www.lifeonnetwork.com/contact-me/">Contact Me</a></li>
+<li id="menu-item-1219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1219"><a href="https://www.lifeonnetwork.com/disclaimer/">Disclaimer</a></li>
+</ul></div>		</nav>
+		<!--bottom-menu-->
+		
+				
+		<div class="content-social">
+			<ul>
+								<li>
+					<a href="https://www.facebook.com/lifeonnetwork/" class="fb-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="https://twitter.com/durgacharanojha" class="twitter-social-icon" target="_blank">
+					</a>
+				</li>
+																				<li>
+					<a href="https://www.youtube.com/channel/UCF4yo-pVRkr947utSZ-Q7jg" class="youtube-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="https://www.lifeonnetwork.com/feed/rss/" class="rss-social-icon">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--content-social-->
+				
+	</div>
+	<!--footer-wrap-->
+	<div class="copyright">
+		<div class="copyright-text">
+			Copyright 2020 @LifeOnNetwork. All Rights Reserved.		</div>
+		<!--copyright-text-->
+	</div>
+	<!--copyright-->
+</footer>
+<!--footer-->
+<link rel="stylesheet" id="fb-bootstrap-css-css" href="./Install and configure Jasper Report Server on Ubuntu Server_files/fb-buttons-bootstrap.css" type="text/css" media="all">
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/comment-reply.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.lifeonnetwork.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/scripts.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/hoverIntent.min.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/js.cookie.min.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/underscore.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/wp-util.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpreview = {"ajaxurl":"https:\/\/www.lifeonnetwork.com\/wp-admin\/admin-ajax.php","loginRequiredMessage":"You must log in to add your review"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/main.js.download"></script>
+<script type="text/javascript" src="./Install and configure Jasper Report Server on Ubuntu Server_files/wp-embed.min.js.download"></script>
+			<script type="text/javascript">
+				var anr_onloadCallback = function() {
+					for ( var i = 0; i < document.forms.length; i++ ) {
+						var form = document.forms[i];
+						var captcha_div = form.querySelector( '.anr_captcha_field_div' );
+
+						if ( null === captcha_div )
+							continue;
+						captcha_div.innerHTML = '';
+						( function( form ) {
+							var anr_captcha = grecaptcha.render( captcha_div,{
+								'sitekey' : '6LfudvAUAAAAAAzDKtjF2z71z0A6-GGnkDNYV-uf',
+								'size'  : 'normal',
+								'theme' : 'light'
+							});
+							if ( typeof jQuery !== 'undefined' ) {
+								jQuery( document.body ).on( 'checkout_error', function(){
+									grecaptcha.reset(anr_captcha);
+								});
+							}
+							if ( typeof wpcf7 !== 'undefined' ) {
+								document.addEventListener( 'wpcf7submit', function() {
+									grecaptcha.reset(anr_captcha);
+								}, false );
+							}
+						})(form);
+					}
+				};
+			</script>
+						<script src="./Install and configure Jasper Report Server on Ubuntu Server_files/api.js.download" async="" defer="">
+			</script>
+			<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Install and configure Jasper Report Server on Ubuntu Server_files/translate_24dp.png" width="20" height="20" alt="Google Tradutor"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Texto original</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Sugerir uma tradução melhor</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="./Install and configure Jasper Report Server on Ubuntu Server_files/bframe.html" name="c-jnwcp65ecfgy" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

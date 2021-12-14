@@ -1,0 +1,4 @@
+
+
+- Instalando o middleware do CORS no Putty: npm i restfy-cors-middleware@1.1.0 -P -E;
+- Para o TypeScript: npm i @types/restify-cors-middleware@1.0.1 -D -E;

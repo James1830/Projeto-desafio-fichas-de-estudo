@@ -1,0 +1,5 @@
+
+- Acessar na web o google play console;
+- Associar uma conta do gmail;
+- Aceitar o contrato de desenvolvedor e pagar a taxa;
+- Acessar o painel e discorrer pelas etapas;

@@ -1,0 +1,10 @@
+O PM2 é um gerenciador de pacotes que possui alto nível de segurança;
+
+- Para instalar: npm i -g pm2;
+- Para startar uma aplicação com o PM2: pm2 start <nome da aplicação.extensão>;
+- Para matar um processo em execussão: kill -9 <número do processo>;
+	Mas ainda assim o PM2 apresentará uma resposta caso o navegador tenha um refresh, 	pois o PM2 reestarta nossa aplicação se algo fizer com que ela caia;
+- Se quisermos parar de fato a aplicação: pm2 stop <nome da aplicação sem extensão>;
+- Para retirar a aplicação do registro do PM2: pm2 delete <nome da aplicação sem extensão>;
+- No modelo acima a aplicação está sendo gerenciada em ForkMode, que possui instância única, para gerenciar a aplicação em multipla instâncias, ou ClusterMode: pm2 start <nome da aplicação.extensão> 0;
+	Esse "0" faz com que o PM2 contabilize o número de CPU's de seu servidor para startar na sua aplicação, também podemos colocar o número de instâncias ao invés do "0";

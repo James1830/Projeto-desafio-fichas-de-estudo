@@ -1,0 +1,12 @@
+
+
+- Instalar o NVM: curl -o- <url do nvm mais aual> | bash
+	É necessário reeniciar a aplicação: exit
+	Para retornar: ssh usuario@dominio
+- Para checar se há versões do node instalada: nvm ls;
+- Para instalar o node: nvm install node 9 (agora podemos usar o "npm");
+- Para instalar o TypeScript: npm i typescript -g;
+- Instalar o PM2: npm install pm2 -g;
+- Por causa de pacotes que podem vir a precisar de compilações nativas, é necessário instalar o build-essential: sudo apt-get install build-essential;
+- Instalar o Python: sudo apt-get install python2.7;
+	É preciso criar um link da versão instalada com o Python: sudo ln -s /usr/bin/python2.7 /usr/bin/python;

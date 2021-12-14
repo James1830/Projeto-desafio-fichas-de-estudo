@@ -1,0 +1,13 @@
+
+
+https://certbot.eff.org/lets-encrypt/ubuntuother-nginx.html - Esse link traz a configuração atual para o certbot (ter cuidado com o tradutor)
+
+- Adicionando o repositório do certbot: sudo add-apt-repository ppa:certbot/certbot;
+	Após adicionar o repositório é preciso fazer um update: sudo apt-get update
+- Abrindo o arquivo de sites do nginx para colocar os domínios: sudo nano /etc/nginx/sites-available/default;
+	Procurar uma tag chamada "server_name" e substituir o undescore que está a sua frente pelos domínios do servidor separados por espaço, após isso fechar e salvar;
+	Para validar a mudança realizada: sudo nginx -t;
+	Após então, restarta o nginx: sudo systemctl reload nginx;
+Usar o certbot para configurar o certificado pelo nginx: sudo certbot --nginx -d <domínio> -d <www.domínio> (um e_mail será pedido);
+	É importante escolher a opção 2 sobre redirecionamento;
+
