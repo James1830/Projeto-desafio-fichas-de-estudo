@@ -1,0 +1,14 @@
+- Modelo para a JDBC url: 
+jdbc:mysql://localhost:3306/db_name?useTimezone=true&serverTimezone=UTC
+
+- Se você tiver o mesmo problema:
+
+	No markup processor factory specified for "" markup
+
+	Vá para a visualização XML e pesquise por 'marcação'. Você encontrará algo assim:
+	<textElement  textAlignment = "Center"  verticalAlignment = "Middle"  markup = "" >
+	Altere para este:
+	<textElement  textAlignment = "Center"  verticalAlignment = "Middle"  markup = "none" >
+
+- Expressão Java para trabalhar com datas:
+	java.time.Period.between($F{data_nascimento}.toLocalDate(),java.time.LocalDate.now()).getYears()

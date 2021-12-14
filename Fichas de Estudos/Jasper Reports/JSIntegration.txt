@@ -1,0 +1,120 @@
+module.exports = class JSIntegration {
+    constructor(jasperUrl, reportPath, type, user, password, parameters) {
+        this.jasperUrl = jasperUrl;
+        this.reportPath = reportPath;
+        this.type = type;
+        this.user = user;
+        this.password = password;
+        this.parameters = [];
+
+        if (typeof parameters !== 'undefined') {
+            for (var key in parameters) {
+                this.parameters = [];
+                this.parameters.push({parameter : key, value : parameters[key]});
+            }
+        } 
+        
+
+        if (this.jasperUrl.indexOf('/') === this.jasperUrl.length-1) {
+            this.jasperUrl = this.jasperUrl.substr(1, this.jasperUrl.length - 2);
+        }
+
+        if (this.reportPath.indexOf('/') === this.reportPath.length-1) {
+            this.reportPath = this.reportPath.substr(1, this.reportPath.length - 2);
+        }
+    }
+
+    addParameter(parameter, value) {
+        this.parameters.push({parameter : parameter, value : value});
+    }
+
+    _getQueryString() {
+        var queryString = '';
+
+        for(var i = 0; i < this.parameters.length; i++) {
+            queryString += (queryString === '' ? '?' : '&') + this.parameters[i].parameter + '=' + this.parameters[i].value;
+        }
+
+        return queryString;
+    }
+
+    execute() {
+        return new Promise((resolve, reject) => {
+            var http = require('http');
+            var url = '';
+
+            var options = {
+                auth : this.user + ':' + this.password
+            };
+
+            url += this.jasperUrl + '/rest_v2/reports/' + this.reportPath + '.' + this.type + this._getQueryString();
+
+            http.get(
+                url,
+                options,
+                (res) => {
+                    let rawData = [];
+                    res.on('data', (chunk) => {
+                        rawData.push(chunk);
+                    });
+
+                    res.on('end', () => {
+                        var buffer = Buffer.concat(rawData);
+                        resolve(buffer);
+                    });
+
+                    res.on('error', (e) => {
+                        reject(e.message);
+                    });
+                }
+
+            )
+        });
+    }
+}
+
+
+
+
+
+
+const express = require('express')
+const app = express()
+ 
+// Criar o endpoint /relatorio/:idAluno
+// A ideia que se passe o idAluno como parâmetro
+
+app.get('/relatorio/:idAluno', async function (req, res) {
+    var JSIntegration = require('./JSIntegration.js'); // Chame aqui o arquivo JSIntegration.js
+    var fs = require('fs');
+ 
+    // Inicializo o meu objeto JSIntegration
+    var jsIntegration = new  JSIntegration(
+      'http://localhost:8080/jasperserver', // URL do Jasper Server
+      'reports/aluno_escola_filtro',        // Caminho para o Relatório, sem a primeira barra
+      'pdf',                                // Tipo do Relatório
+      'jasperadmin',                        // Usuário com acesso ao relatório
+      'jasperadmin',                         // Senha do usuário
+      {"P_ALUNO_ID" :  req.params.idAluno}  // Passo o parâmetro do aluno_escola_filtro com base na requisição
+    );
+     
+    // Obtenho os dados
+    var data = await jsIntegration.execute();
+ 
+    // Imprimo um header para o meu arquivo que vai ser baixado
+    // No caso, header de PDF. Altere os parâmetros conforme desejado
+    // Se quiser que seja download, substitua inline por attachment
+    res.writeHead(200, {
+        'Content-Type': 'application/pdf',
+        'Content-disposition': 'inline;filename=' + 'relatorio.pdf',
+        'Content-Length': data.length
+    });
+ 
+    // Imprime os dados
+    res.end(data);
+ 
+  
+})
+ 
+// Coloca o endpoint para ser escutado na porta 3000
+app.listen(3000)
